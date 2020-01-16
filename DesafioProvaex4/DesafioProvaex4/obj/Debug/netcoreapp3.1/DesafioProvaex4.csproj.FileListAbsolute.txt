@@ -1,0 +1,11 @@
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\bin\Debug\netcoreapp3.1\DesafioProvaex4.exe
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\bin\Debug\netcoreapp3.1\DesafioProvaex4.deps.json
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\bin\Debug\netcoreapp3.1\DesafioProvaex4.runtimeconfig.json
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\bin\Debug\netcoreapp3.1\DesafioProvaex4.runtimeconfig.dev.json
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\bin\Debug\netcoreapp3.1\DesafioProvaex4.dll
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\bin\Debug\netcoreapp3.1\DesafioProvaex4.pdb
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\obj\Debug\netcoreapp3.1\DesafioProvaex4.csprojAssemblyReference.cache
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\obj\Debug\netcoreapp3.1\DesafioProvaex4.AssemblyInfoInputs.cache
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\obj\Debug\netcoreapp3.1\DesafioProvaex4.AssemblyInfo.cs
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\obj\Debug\netcoreapp3.1\DesafioProvaex4.dll
+C:\Users\BSBO\CSharp\DesafioProvaex4\DesafioProvaex4\obj\Debug\netcoreapp3.1\DesafioProvaex4.pdb

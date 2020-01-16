@@ -1,0 +1,11 @@
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\obj\Debug\netcoreapp3.1\Desafio04.csprojAssemblyReference.cache
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\obj\Debug\netcoreapp3.1\Desafio04.AssemblyInfoInputs.cache
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\obj\Debug\netcoreapp3.1\Desafio04.AssemblyInfo.cs
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\bin\Debug\netcoreapp3.1\Desafio04.exe
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\bin\Debug\netcoreapp3.1\Desafio04.deps.json
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\bin\Debug\netcoreapp3.1\Desafio04.runtimeconfig.json
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\bin\Debug\netcoreapp3.1\Desafio04.runtimeconfig.dev.json
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\bin\Debug\netcoreapp3.1\Desafio04.dll
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\bin\Debug\netcoreapp3.1\Desafio04.pdb
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\obj\Debug\netcoreapp3.1\Desafio04.dll
+C:\Users\BSBO\CSharp\Desafio04\Desafio04\obj\Debug\netcoreapp3.1\Desafio04.pdb

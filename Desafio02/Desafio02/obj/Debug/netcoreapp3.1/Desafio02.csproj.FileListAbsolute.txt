@@ -1,0 +1,11 @@
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\obj\Debug\netcoreapp3.1\Desafio02.csprojAssemblyReference.cache
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\obj\Debug\netcoreapp3.1\Desafio02.AssemblyInfoInputs.cache
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\obj\Debug\netcoreapp3.1\Desafio02.AssemblyInfo.cs
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\bin\Debug\netcoreapp3.1\Desafio02.exe
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\bin\Debug\netcoreapp3.1\Desafio02.deps.json
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\bin\Debug\netcoreapp3.1\Desafio02.runtimeconfig.json
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\bin\Debug\netcoreapp3.1\Desafio02.runtimeconfig.dev.json
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\bin\Debug\netcoreapp3.1\Desafio02.dll
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\bin\Debug\netcoreapp3.1\Desafio02.pdb
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\obj\Debug\netcoreapp3.1\Desafio02.dll
+C:\Users\BSBO\CSharp\Desafio02\Desafio02\obj\Debug\netcoreapp3.1\Desafio02.pdb

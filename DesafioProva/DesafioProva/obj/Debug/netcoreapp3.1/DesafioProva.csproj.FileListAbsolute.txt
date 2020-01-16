@@ -1,0 +1,11 @@
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\obj\Debug\netcoreapp3.1\DesafioProva.csprojAssemblyReference.cache
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\obj\Debug\netcoreapp3.1\DesafioProva.AssemblyInfoInputs.cache
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\obj\Debug\netcoreapp3.1\DesafioProva.AssemblyInfo.cs
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\bin\Debug\netcoreapp3.1\DesafioProva.exe
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\bin\Debug\netcoreapp3.1\DesafioProva.deps.json
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\bin\Debug\netcoreapp3.1\DesafioProva.runtimeconfig.json
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\bin\Debug\netcoreapp3.1\DesafioProva.runtimeconfig.dev.json
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\bin\Debug\netcoreapp3.1\DesafioProva.dll
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\bin\Debug\netcoreapp3.1\DesafioProva.pdb
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\obj\Debug\netcoreapp3.1\DesafioProva.dll
+C:\Users\BSBO\CSharp\DesafioProva\DesafioProva\obj\Debug\netcoreapp3.1\DesafioProva.pdb
