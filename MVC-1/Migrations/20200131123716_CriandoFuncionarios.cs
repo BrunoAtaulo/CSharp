@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MVC_1.Migrations
 {
-    public partial class AdicionandoFuncionario : Migration
+    public partial class CriandoFuncionarios : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,8 @@ namespace MVC_1.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(nullable: true),
-                    Salario = table.Column<float>(nullable: false)
+                    Salario = table.Column<float>(nullable: false),
+                    Cpf = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

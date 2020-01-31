@@ -20506,6 +20506,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\ASPCORE\\MVC-1\\Views\\Funcionarios\\Index.cshtml",
+      "TargetPath": "Views\\Funcionarios\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\ASPCORE\\MVC-1\\Views\\Funcionarios\\Cadastrar.cshtml",
+      "TargetPath": "Views\\Funcionarios\\Cadastrar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\ASPCORE\\MVC-1\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

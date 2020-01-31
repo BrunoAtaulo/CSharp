@@ -1,0 +1,16 @@
+@model IEnumerable<MVC_1.Models.Funcionario>
+
+    <h2>Todos os funcionarios</h2>
+<a href="/Funcionarios/Cadastrar" class="btn btn-success">Novo funcionário</a>
+<hr>
+
+    @foreach (var funcionario in Model)
+    {
+        <p><strong>Nome:</strong> @funcionario.Nome</p>
+        <p><strong>Salario:</strong> @funcionario.Salario</p>
+        <p><strong>CPF:</strong> @funcionario.Cpf</p>
+        <a href="/Funcionarios/Editar/@funcionario.Id" class="btn btn-success">Editar</a>
+        <a href="/Funcionarios/Deletar/@funcionario.Id" class="btn btn-danger">Deletar</a>
+        <hr>
+
+    }

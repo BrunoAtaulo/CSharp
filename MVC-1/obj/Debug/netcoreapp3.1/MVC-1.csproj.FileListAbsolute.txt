@@ -54,3 +54,5 @@ C:\Users\BSBO\Desktop\ASPCORE\MVC-1\bin\Debug\netcoreapp3.1\Microsoft.Extensions
 C:\Users\BSBO\Desktop\ASPCORE\MVC-1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\BSBO\Desktop\ASPCORE\MVC-1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\BSBO\Desktop\ASPCORE\MVC-1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\BSBO\Desktop\ASPCORE\MVC-1\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Cadastrar.cshtml.g.cs
+C:\Users\BSBO\Desktop\ASPCORE\MVC-1\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Index.cshtml.g.cs

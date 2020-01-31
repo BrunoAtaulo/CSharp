@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_1.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20200129181025_Teste3Funcionario")]
-    partial class Teste3Funcionario
+    [Migration("20200131165751_CategoriasAdd")]
+    partial class CategoriasAdd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -17,6 +17,20 @@ namespace MVC_1.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("MVC_1.Models.Categoria", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categorias");
+                });
 
             modelBuilder.Entity("MVC_1.Models.Funcionario", b =>
                 {

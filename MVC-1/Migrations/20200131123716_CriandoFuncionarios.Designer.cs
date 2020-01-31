@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_1.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20200129175545_AlterandoFuncionario")]
-    partial class AlterandoFuncionario
+    [Migration("20200131123716_CriandoFuncionarios")]
+    partial class CriandoFuncionarios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
