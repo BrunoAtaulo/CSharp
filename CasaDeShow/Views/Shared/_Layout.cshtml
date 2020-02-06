@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CasaDeShow</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/reset.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    
 </head>
 <body>
     <header>
+        @* ----------------------- MENU ----------------------- *@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CasaDeShow</a>
@@ -20,18 +24,16 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="men-palheta" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Casas de Show</a>
+                            <a class="men-palheta" asp-area="" asp-controller="Home" asp-action="Casasdeshow">Casas de Show</a>
                         </li>
-                        
-                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Eventos">Eventos</a>
+                            <a class="men-palheta" asp-area="" asp-controller="Home" asp-action="Eventos">Eventos</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Historico">Historico</a>
+                        <li class="nav-item">
+                            <a class="men-palheta" asp-area="" asp-controller="Home" asp-action="Historico">Historico</a>
                         </li>
 
 

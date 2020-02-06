@@ -24,7 +24,7 @@ namespace CasaDeShow.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Casasdeshow()
         {
             return View();
         }

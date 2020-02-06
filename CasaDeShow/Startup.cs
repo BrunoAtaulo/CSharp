@@ -30,10 +30,24 @@ namespace CasaDeShow
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            /*services.AddDefaultIdentity<IdentityUser>(config => {
+                config.Password.RequireNonAlphanumeric = false;
+                config.Password.RequireUppercase = false;
+                config.SignIn.RequireConfirmedAccount = false;
+            });*/
+
+            services.AddDefaultIdentity<IdentityUser>(config =>
+            {
+                config.Password.RequireNonAlphanumeric = false;
+                config.Password.RequireUppercase = false;
+                config.SignIn.RequireConfirmedAccount = false;
+            })
+                   .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddControllersWithViews();
-           services.AddRazorPages();
+
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
