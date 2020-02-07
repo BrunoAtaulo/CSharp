@@ -23,17 +23,20 @@ namespace CasaDeShow.Controllers
         {
             return View();
         }
-
+        
+        [Route("casadeshow")]
         public IActionResult Casasdeshow()
         {
             return View();
         }
 
+        [Route("eventos")]
          public IActionResult Eventos()
         {
             return View();
         }
 
+        [Route("historico")]
          public IActionResult Historico()
         {
             return View();
