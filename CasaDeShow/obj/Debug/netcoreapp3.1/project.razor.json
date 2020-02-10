@@ -20516,13 +20516,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Eventos\\Eventos.cshtml",
+      "TargetPath": "Views\\Eventos\\Eventos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Home\\Historico.cshtml",
-      "TargetPath": "Views\\Home\\Historico.cshtml",
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Casasdeshow\\Casasdeshow.cshtml",
+      "TargetPath": "Views\\Casasdeshow\\Casasdeshow.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20551,6 +20556,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Historico\\Historico.cshtml",
+      "TargetPath": "Views\\Historico\\Historico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -20561,18 +20571,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Home\\Eventos.cshtml",
-      "TargetPath": "Views\\Home\\Eventos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Home\\Casasdeshow.cshtml",
-      "TargetPath": "Views\\Home\\Casasdeshow.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Shared\\_Layout2.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout2.cshtml",
       "FileKind": "mvc"
     },
     {

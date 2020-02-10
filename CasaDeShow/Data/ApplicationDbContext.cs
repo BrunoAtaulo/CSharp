@@ -9,7 +9,9 @@ namespace CasaDeShow.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        public DbSet<Casadeshow> CasasDeShow { get; set; }
+        public DbSet<Casadeshow> Casadeshow { get; set; }
+        
+        public DbSet<Evento> Evento { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

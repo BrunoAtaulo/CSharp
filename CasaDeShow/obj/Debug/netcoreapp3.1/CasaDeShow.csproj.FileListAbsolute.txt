@@ -312,12 +312,8 @@ C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Areas\Ident
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Home\Casasdeshow.cshtml.g.cs
-C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Home\Eventos.cshtml.g.cs
-C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Home\Historico.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -328,3 +324,8 @@ C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.Views.
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.csproj.CopyComplete
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.dll
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.pdb
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Eventos\Eventos.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Historico\Historico.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Casasdeshow\Casasdeshow.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs

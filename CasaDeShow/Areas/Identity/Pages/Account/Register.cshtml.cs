@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -60,6 +61,10 @@ namespace CasaDeShow.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "A senha e a confirmação de senha não coincidem.")]
             public string ConfirmPassword { get; set; }
+
+            //Inserir os campos para poder gerar as Claims
+            public string NomeCompleto { get; set; }
+            public bool adm { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -79,6 +84,21 @@ namespace CasaDeShow.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+
+
+                    //----- Código para as Claims -----
+                    await _userManager.AddClaimAsync(user, new Claim("NomeCompleto", Input.NomeCompleto));
+                    // await _userManager.AddClaimAsync(user, new Claim("Age", Input.Idade.ToString()));
+                    
+
+
+
+                    // ---------------------------------
+
+
+
+
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

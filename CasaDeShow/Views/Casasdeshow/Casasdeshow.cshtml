@@ -1,0 +1,12 @@
+﻿@model CasaDeShow.Models.Casadeshow;
+
+<h2>Casa de show</h2>
+<form class="form-horizontal" asp-controller="Casasdeshow" asp-action="Cadastrar"> 
+
+    <label>Casa de show: </label>
+    <input type="text" class="form-control" asp-for="Nome" placeholder="Nome da casa de show">
+    <label> </label>
+    <input type="text" class="form-control" asp-for="Endereco" placeholder="Endereco">
+
+    <button class="btn btn-success">Enviar</button>
+</form>

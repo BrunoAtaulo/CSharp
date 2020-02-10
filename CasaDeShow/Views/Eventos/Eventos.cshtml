@@ -1,0 +1,16 @@
+@model CasaDeShow.Models.Evento;
+
+<h2>Cadastro de eventos</h2>
+<form class="form-horizontal" asp-controller="Eventos" asp-action="Cadastrar"> 
+
+<label>Evento: </label>
+<input type="text" class="form-control" asp-for="NomeEvento" placeholder="Evento">
+<label>Capacidade: </label>
+<input type="number" class="form-control" asp-for="Capacidade" placeholder="Numero máximo de pessoas">
+<label>Data: </label>
+<input class="form-control" asp-for="Data" placeholder="dd/mm/aaaa hh:mm">
+<label>Valor do ingresso: </label>
+<input class="form-control" asp-for="ValorIngresso" placeholder="Valor do ingresso">
+
+<button class="btn btn-success">Enviar</button>
+</form>

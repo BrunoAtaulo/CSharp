@@ -48,6 +48,37 @@ namespace CasaDeShow.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Casadeshow",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(nullable: true),
+                    Endereco = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Casadeshow", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Evento",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    NomeEvento = table.Column<string>(nullable: true),
+                    Capacidade = table.Column<int>(nullable: false),
+                    Data = table.Column<DateTime>(nullable: false),
+                    ValorIngresso = table.Column<double>(nullable: false),
+                    GeneroMusica = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Evento", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -207,6 +238,12 @@ namespace CasaDeShow.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Casadeshow");
+
+            migrationBuilder.DropTable(
+                name: "Evento");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
