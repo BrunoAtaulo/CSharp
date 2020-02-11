@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CasasDeShow.Controllers
 {
-    [Authorize]
+    [Authorize(Policy = "Gerenciador")]
     public class CasasdeshowController : Controller
     {
         //----- Acessar banco de dados -----
@@ -21,10 +21,6 @@ namespace CasasDeShow.Controllers
         [Route("casadeshow")]
         public IActionResult Casasdeshow()
         {
-            // if ()
-            // {
-            // return View("_Layout2");
-            // }
             return View();
         }
 
@@ -33,9 +29,11 @@ namespace CasasDeShow.Controllers
         public IActionResult Cadastrar(Casadeshow casadeshow)
         {
             //Procedimento para cadastrar evento e continuar na propria página após o cadastro
+
             database.Casadeshow.Add(casadeshow);
             database.SaveChanges();
             return RedirectToAction("Casasdeshow");
+
         }
     }
 }

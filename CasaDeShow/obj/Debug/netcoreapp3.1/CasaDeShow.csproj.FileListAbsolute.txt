@@ -327,5 +327,4 @@ C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.pdb
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Eventos\Eventos.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Historico\Historico.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Casasdeshow\Casasdeshow.cshtml.g.cs
-C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs

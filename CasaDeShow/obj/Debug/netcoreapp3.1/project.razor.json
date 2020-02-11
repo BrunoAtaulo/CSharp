@@ -20576,11 +20576,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Shared\\_Layout2.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout2.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

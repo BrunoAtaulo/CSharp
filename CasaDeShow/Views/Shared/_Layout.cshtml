@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -26,12 +31,18 @@
                         <li class="nav-item">
                             <a class="men-palheta" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+
+                        @* Menu adm *@
+                        @if (SignInManager.IsSignedIn(User) && User.FindFirst("Adm").Value == "True")
+                        {
+                            <li class="nav-item">
                             <a class="men-palheta" asp-area="" asp-controller="Casasdeshow" asp-action="Casasdeshow">Casas de Show</a>
-                        </li>
-                        <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                             <a class="men-palheta" asp-area="" asp-controller="Eventos" asp-action="Eventos">Eventos</a>
-                        </li>
+                            </li>
+                        }
+                        
                         <li class="nav-item">
                             <a class="men-palheta" asp-area="" asp-controller="Historico" asp-action="Historico">Historico</a>
                         </li>

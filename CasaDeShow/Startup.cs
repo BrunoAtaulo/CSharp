@@ -47,6 +47,10 @@ namespace CasaDeShow
             })
                    .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            // Criando politica
+            services.AddAuthorization(options => options.AddPolicy("Gerenciador", policy => policy.RequireClaim("Adm","True")));
+
+
             services.AddControllersWithViews();
 
             services.AddRazorPages();

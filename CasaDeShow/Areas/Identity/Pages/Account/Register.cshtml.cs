@@ -64,15 +64,13 @@ namespace CasaDeShow.Areas.Identity.Pages.Account
 
             //Inserir os campos para poder gerar as Claims
             public string NomeCompleto { get; set; }
-            public bool adm { get; set; }
+            public bool Adm { get; set; }
         }
-
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
-
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
@@ -85,20 +83,10 @@ namespace CasaDeShow.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-
-
                     //----- Código para as Claims -----
                     await _userManager.AddClaimAsync(user, new Claim("NomeCompleto", Input.NomeCompleto));
-                    // await _userManager.AddClaimAsync(user, new Claim("Age", Input.Idade.ToString()));
-                    
-
-
-
+                    await _userManager.AddClaimAsync(user, new Claim("Adm", Input.Adm.ToString()));
                     // ---------------------------------
-
-
-
-
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

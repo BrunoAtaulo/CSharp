@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CasaDeShow.Controllers
 {
-    [Authorize]
+    [Authorize(Policy = "Gerenciador")]
     public class EventosController : Controller
     {
         //----- Acessar banco de dados -----
