@@ -53,8 +53,8 @@ namespace CasaDeShow.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(nullable: true),
-                    Endereco = table.Column<string>(nullable: true)
+                    Nome = table.Column<string>(nullable: false),
+                    Endereco = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,11 +67,11 @@ namespace CasaDeShow.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NomeEvento = table.Column<string>(nullable: true),
+                    NomeEvento = table.Column<string>(nullable: false),
                     Capacidade = table.Column<int>(nullable: false),
                     Data = table.Column<DateTime>(nullable: false),
                     ValorIngresso = table.Column<double>(nullable: false),
-                    GeneroMusica = table.Column<string>(nullable: true)
+                    GeneroMusica = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

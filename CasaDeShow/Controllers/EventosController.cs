@@ -12,14 +12,14 @@ namespace CasaDeShow.Controllers
         //----- Acessar banco de dados -----
         public readonly ApplicationDbContext database;
 
-        public EventosController (ApplicationDbContext database)
+        public EventosController(ApplicationDbContext database)
         {
             this.database = database;
         }
         // ----------------------------------
 
         [Route("eventos")]
-         public IActionResult Eventos()
+        public IActionResult Eventos()
         {
             // return View("_Layout2");
             return View();
@@ -29,9 +29,17 @@ namespace CasaDeShow.Controllers
         public IActionResult Cadastrar(Evento evento)
         {
             //Procedimento para cadastrar evento
-            database.Evento.Add(evento);
-            database.SaveChanges();
-            return Content("Evento cadastrado!");
+            if (ModelState.IsValid)
+            {
+                database.Evento.Add(evento);
+                database.SaveChanges();
+                return Content("Evento cadastrado!");
+            }
+            else
+            {
+                return View("eventos");
+            }
+
             // return RedirectToAction("eventos");
         }
     }

@@ -31,9 +31,15 @@ namespace CasasDeShow.Controllers
             //Procedimento para cadastrar evento e continuar na propria página após o cadastro
 
             database.Casadeshow.Add(casadeshow);
-            database.SaveChanges();
-            return RedirectToAction("Casasdeshow");
-
+            if (ModelState.IsValid)
+            {
+                database.SaveChanges();
+                return RedirectToAction("Casasdeshow");
+            }
+            else
+            {
+                return View("Casasdeshow");
+            }
         }
     }
 }

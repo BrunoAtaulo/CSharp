@@ -328,3 +328,13 @@ C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Event
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Historico\Historico.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Casasdeshow\Casasdeshow.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroCasaShow\Create.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroCasaShow\Delete.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroCasaShow\Details.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroCasaShow\Edit.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroCasaShow\Index.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Create.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Delete.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Details.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Edit.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Index.cshtml.g.cs

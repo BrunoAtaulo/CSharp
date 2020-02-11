@@ -5,8 +5,9 @@
 
     <label>Casa de show: </label>
     <input type="text" class="form-control" asp-for="Nome" placeholder="Nome da casa de show">
+    <span asp-validation-for="Nome"> </span>
     <label> </label>
     <input type="text" class="form-control" asp-for="Endereco" placeholder="Endereco">
-
+    <span asp-validation-for="Endereco"> </span>
     <button class="btn btn-success">Enviar</button>
 </form>

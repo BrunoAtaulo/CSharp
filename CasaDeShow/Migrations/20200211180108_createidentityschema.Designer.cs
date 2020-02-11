@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasaDeShow.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200211113404_createidentityschema")]
+    [Migration("20200211180108_createidentityschema")]
     partial class createidentityschema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,9 +26,11 @@ namespace CasaDeShow.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Endereco")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
@@ -49,9 +51,11 @@ namespace CasaDeShow.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("GeneroMusica")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("NomeEvento")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<double>("ValorIngresso")

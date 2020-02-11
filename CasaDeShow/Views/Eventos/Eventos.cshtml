@@ -5,12 +5,16 @@
 
 <label>Evento: </label>
 <input type="text" class="form-control" asp-for="NomeEvento" placeholder="Evento">
+<span asp-validation-for="NomeEvento"></span>
 <label>Capacidade: </label>
-<input type="number" class="form-control" asp-for="Capacidade" placeholder="Numero máximo de pessoas">
+<input type="number" onkeypress="return event.charcode >=48" min="1" class="form-control" asp-for="Capacidade" placeholder="Numero máximo de pessoas">
+<span asp-validation-for="Capacidade"></span>
 <label>Data: </label>
 <input class="form-control" asp-for="Data" placeholder="dd/mm/aaaa hh:mm">
+<span asp-validation-for="Data"></span>
 <label>Valor do ingresso: </label>
 <input class="form-control" asp-for="ValorIngresso" placeholder="Valor do ingresso">
+<span asp-validation-for="ValorIngresso"></span>
 
 <button class="btn btn-success">Enviar</button>
 </form>

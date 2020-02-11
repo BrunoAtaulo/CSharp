@@ -20516,6 +20516,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroCasaShow\\Index.cshtml",
+      "TargetPath": "Views\\CadastroCasaShow\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroEvento\\Edit.cshtml",
+      "TargetPath": "Views\\CadastroEvento\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Eventos\\Eventos.cshtml",
       "TargetPath": "Views\\Eventos\\Eventos.cshtml",
       "FileKind": "mvc"
@@ -20536,6 +20546,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroCasaShow\\Delete.cshtml",
+      "TargetPath": "Views\\CadastroCasaShow\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20551,8 +20566,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroEvento\\Create.cshtml",
+      "TargetPath": "Views\\CadastroEvento\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroCasaShow\\Create.cshtml",
+      "TargetPath": "Views\\CadastroCasaShow\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroEvento\\Details.cshtml",
+      "TargetPath": "Views\\CadastroEvento\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20576,13 +20606,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroCasaShow\\Edit.cshtml",
+      "TargetPath": "Views\\CadastroCasaShow\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroEvento\\Index.cshtml",
+      "TargetPath": "Views\\CadastroEvento\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroCasaShow\\Details.cshtml",
+      "TargetPath": "Views\\CadastroCasaShow\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\CadastroEvento\\Delete.cshtml",
+      "TargetPath": "Views\\CadastroEvento\\Delete.cshtml",
       "FileKind": "mvc"
     }
   ],

@@ -24,9 +24,11 @@ namespace CasaDeShow.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Endereco")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
@@ -47,9 +49,11 @@ namespace CasaDeShow.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("GeneroMusica")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("NomeEvento")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<double>("ValorIngresso")

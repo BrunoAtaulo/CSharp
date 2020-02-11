@@ -36,10 +36,10 @@
                         @if (SignInManager.IsSignedIn(User) && User.FindFirst("Adm").Value == "True")
                         {
                             <li class="nav-item">
-                            <a class="men-palheta" asp-area="" asp-controller="Casasdeshow" asp-action="Casasdeshow">Casas de Show</a>
+                            <a class="men-palheta" asp-area="" asp-controller="CadastroCasaShow" asp-action="Index">Casas de Show</a>
                             </li>
                             <li class="nav-item">
-                            <a class="men-palheta" asp-area="" asp-controller="Eventos" asp-action="Eventos">Eventos</a>
+                            <a class="men-palheta" asp-area="" asp-controller="CadastroEvento" asp-action="Index">Eventos</a>
                             </li>
                         }
                         
