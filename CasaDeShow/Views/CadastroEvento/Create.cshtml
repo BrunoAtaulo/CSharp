@@ -1,10 +1,10 @@
 @model CasaDeShow.Models.Evento
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar Evento";
 }
 
-<h1>Create</h1>
+<h1>Criar Evento</h1>
 
 <h4>Evento</h4>
 <hr />
@@ -32,9 +32,34 @@
                 <input asp-for="ValorIngresso" class="form-control" />
                 <span asp-validation-for="ValorIngresso" class="text-danger"></span>
             </div>
+
+
+            
+             <div class="form-group">
+                <label asp-for="CasadeshowId" class="control-label"></label>
+                <select asp-for="CasadeshowId" class="form-control">
+            	@foreach (var item in ViewBag.CasaDeShow)
+                {
+                    <option value="@item.Id">@item.Nome</option>
+                }
+
+                </select>  
+            </div>
+
+
+
             <div class="form-group">
                 <label asp-for="GeneroMusica" class="control-label"></label>
-                <input asp-for="GeneroMusica" class="form-control" />
+                <select name="GeneroMusica">
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Pagode">Pagode</option>
+                    <option value="Samba">Samba</option>
+                    <option value="Axe">Axé</option>
+                    <option value="Gospel">Gospel</option>
+                    <option value="Forro">Forró</option>
+                    <option value="Funk">Funk</option>
+                </select>
                 <span asp-validation-for="GeneroMusica" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -45,6 +70,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para a lista</a>
 </div>
 

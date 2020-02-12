@@ -20526,18 +20526,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Eventos\\Eventos.cshtml",
-      "TargetPath": "Views\\Eventos\\Eventos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Casasdeshow\\Casasdeshow.cshtml",
-      "TargetPath": "Views\\Casasdeshow\\Casasdeshow.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20551,6 +20541,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Shared\\OLD_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\OLD_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20558,6 +20553,11 @@
     {
       "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\pasta\\CasaDeShow\\Views\\Shared\\Azul-arrumar_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\Azul-arrumar_Layout.cshtml",
       "FileKind": "mvc"
     },
     {

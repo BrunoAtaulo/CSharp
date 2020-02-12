@@ -9,7 +9,7 @@ namespace CasaDeShow.Models
         [Required(ErrorMessage = "Campo nome do evento necessário.", AllowEmptyStrings = false)]
         public string NomeEvento { get; set; }
 
-        [Range(1, 200000, ErrorMessage = "Campo capacidade necessário.")]
+        [Range(0, 200000, ErrorMessage = "Campo capacidade necessário.")]
         public int Capacidade { get; set; }
 
         [Required(ErrorMessage = "Campo Data com hora do evento necessário.")]
@@ -18,10 +18,13 @@ namespace CasaDeShow.Models
 
         [Required(ErrorMessage = "Campo valor do ingresso necessário.")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###,##0.00}")]
-
         public double ValorIngresso { get; set; }
-        [Required(ErrorMessage = "Campo gênero da música necessário.")]
 
+        [Required(ErrorMessage = "Campo gênero da música necessário.")]
         public string GeneroMusica { get; set; }
+
+        public int CasadeshowId { get; set; }
+
+        public Casadeshow Casadeshow { get; set; }
     }
 }

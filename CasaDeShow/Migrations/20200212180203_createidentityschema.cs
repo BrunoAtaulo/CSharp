@@ -62,23 +62,6 @@ namespace CasaDeShow.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Evento",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NomeEvento = table.Column<string>(nullable: false),
-                    Capacidade = table.Column<int>(nullable: false),
-                    Data = table.Column<DateTime>(nullable: false),
-                    ValorIngresso = table.Column<double>(nullable: false),
-                    GeneroMusica = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Evento", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -184,6 +167,30 @@ namespace CasaDeShow.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Evento",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    NomeEvento = table.Column<string>(nullable: false),
+                    Capacidade = table.Column<int>(nullable: false),
+                    Data = table.Column<DateTime>(nullable: false),
+                    ValorIngresso = table.Column<double>(nullable: false),
+                    GeneroMusica = table.Column<string>(nullable: false),
+                    CasadeshowId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Evento", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Evento_Casadeshow_CasadeshowId",
+                        column: x => x.CasadeshowId,
+                        principalTable: "Casadeshow",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -220,6 +227,11 @@ namespace CasaDeShow.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Evento_CasadeshowId",
+                table: "Evento",
+                column: "CasadeshowId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -240,9 +252,6 @@ namespace CasaDeShow.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Casadeshow");
-
-            migrationBuilder.DropTable(
                 name: "Evento");
 
             migrationBuilder.DropTable(
@@ -250,6 +259,9 @@ namespace CasaDeShow.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Casadeshow");
         }
     }
 }

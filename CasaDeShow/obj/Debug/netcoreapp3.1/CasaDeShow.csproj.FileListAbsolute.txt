@@ -324,9 +324,7 @@ C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.Views.
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.csproj.CopyComplete
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.dll
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.pdb
-C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Eventos\Eventos.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Historico\Historico.cshtml.g.cs
-C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Casasdeshow\Casasdeshow.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroCasaShow\Create.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroCasaShow\Delete.cshtml.g.cs
@@ -338,3 +336,5 @@ C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Cadas
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Details.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Edit.cshtml.g.cs
 C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\CadastroEvento\Index.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Azul-arrumar_Layout.cshtml.g.cs
+C:\Users\BSBO\Desktop\pasta\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Shared\OLD_Layout.cshtml.g.cs

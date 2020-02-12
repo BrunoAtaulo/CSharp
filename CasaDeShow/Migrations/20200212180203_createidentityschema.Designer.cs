@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasaDeShow.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200211180108_createidentityschema")]
+    [Migration("20200212180203_createidentityschema")]
     partial class createidentityschema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,9 @@ namespace CasaDeShow.Migrations
                     b.Property<int>("Capacidade")
                         .HasColumnType("int");
 
+                    b.Property<int>("CasadeshowId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime(6)");
 
@@ -62,6 +65,8 @@ namespace CasaDeShow.Migrations
                         .HasColumnType("double");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CasadeshowId");
 
                     b.ToTable("Evento");
                 });
@@ -260,6 +265,15 @@ namespace CasaDeShow.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("CasaDeShow.Models.Evento", b =>
+                {
+                    b.HasOne("CasaDeShow.Models.Casadeshow", "Casadeshow")
+                        .WithMany()
+                        .HasForeignKey("CasadeshowId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
