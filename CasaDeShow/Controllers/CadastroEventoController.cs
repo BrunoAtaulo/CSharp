@@ -46,8 +46,16 @@ namespace CasaDeShow.Controllers
         // GET: CadastroEvento/Create
         public IActionResult Create()
         {
-            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
-            return View();
+            if (_context.Casadeshow.Count() == 0)
+            {
+                TempData["ErroCasa"]="Necessário ter casa de show para cadastrar evento";
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                ViewBag.CasaDeShow = _context.Casadeshow.ToList();
+                return View();
+            }
         }
 
         // POST: CadastroEvento/Create
@@ -59,8 +67,12 @@ namespace CasaDeShow.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 _context.Add(evento);
                 await _context.SaveChangesAsync();
+
+                ViewBag.CasaDeShow = _context.Casadeshow.ToList();
+
                 return RedirectToAction(nameof(Index));
             }
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();

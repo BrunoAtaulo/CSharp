@@ -13,22 +13,22 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="NomeEvento" class="control-label"></label>
+                <label asp-for="NomeEvento" class="control-label">Evento: </label>
                 <input asp-for="NomeEvento" class="form-control" />
                 <span asp-validation-for="NomeEvento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Capacidade" class="control-label"></label>
+                <label asp-for="Capacidade" class="control-label">Capacidade: </label>
                 <input asp-for="Capacidade" class="form-control" />
                 <span asp-validation-for="Capacidade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
+                <label asp-for="Data" class="control-label">Data: </label>
                 <input asp-for="Data" class="form-control" />
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ValorIngresso" class="control-label"></label>
+                <label asp-for="ValorIngresso" class="control-label">Valor do ingresso:</label>
                 <input asp-for="ValorIngresso" class="form-control" />
                 <span asp-validation-for="ValorIngresso" class="text-danger"></span>
             </div>
@@ -36,20 +36,20 @@
 
             
              <div class="form-group">
-                <label asp-for="CasadeshowId" class="control-label"></label>
+                <label asp-for="CasadeshowId" class="control-label">Casa de show: </label>
                 <select asp-for="CasadeshowId" class="form-control">
             	@foreach (var item in ViewBag.CasaDeShow)
                 {
                     <option value="@item.Id">@item.Nome</option>
                 }
-
                 </select>  
+                <span asp-validation-for="CasadeshowId" class="text-danger"></span>
             </div>
 
 
 
             <div class="form-group">
-                <label asp-for="GeneroMusica" class="control-label"></label>
+                <label asp-for="GeneroMusica" class="control-label">Gênero: </label>
                 <select name="GeneroMusica">
                     <option value="Rock">Rock</option>
                     <option value="Pop">Pop</option>
