@@ -24,6 +24,7 @@ namespace CasaDeShow.Controllers
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.CasaDeShow = database.Casadeshow.ToList();
             return View(await database.Evento.ToListAsync());
         }
         

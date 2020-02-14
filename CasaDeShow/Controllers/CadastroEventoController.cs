@@ -22,6 +22,7 @@ namespace CasaDeShow.Controllers
         // GET: CadastroEvento
         public async Task<IActionResult> Index()
         {
+            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(await _context.Evento.ToListAsync());
         }
 
@@ -39,7 +40,7 @@ namespace CasaDeShow.Controllers
             {
                 return NotFound();
             }
-
+            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(evento);
         }
 
@@ -92,6 +93,7 @@ namespace CasaDeShow.Controllers
             {
                 return NotFound();
             }
+            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(evento);
         }
 
@@ -100,7 +102,7 @@ namespace CasaDeShow.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeEvento,Capacidade,Data,ValorIngresso,GeneroMusica")] Evento evento)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeEvento,Capacidade,Data,ValorIngresso,GeneroMusica,CasadeshowId")] Evento evento)
         {
             if (id != evento.Id)
             {
@@ -127,6 +129,7 @@ namespace CasaDeShow.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(evento);
         }
 

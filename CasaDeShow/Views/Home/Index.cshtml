@@ -21,6 +21,9 @@
                 @Html.DisplayNameFor(model => model.ValorIngresso)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Casadeshow)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.GeneroMusica)
             </th>
         </tr>
@@ -39,6 +42,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ValorIngresso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Casadeshow.Nome)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.GeneroMusica)

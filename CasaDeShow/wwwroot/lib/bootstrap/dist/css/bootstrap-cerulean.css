@@ -4522,7 +4522,8 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
+
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -7186,8 +7187,8 @@ button.bg-dark:focus {
   background-color: #1d2124 !important;
 }
 
-.bg-white {
-  background-color: #fff !important;
+.bg-darkblue {
+  background-image: linear-gradient(to bottom, #045099, #023463);
 }
 
 .bg-transparent {
