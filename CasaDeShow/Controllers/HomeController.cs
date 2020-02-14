@@ -7,34 +7,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CasaDeShow.Models;
 using CasaDeShow.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CasaDeShow.Controllers
 {
     public class HomeController : Controller
     {
-        /*
-        //----- Acessar banco de dados -----
-        public readonly ApplicationDbContext database;
-
-        public HomeController (ApplicationDbContext database)
-        {
-            this.database = database;
-        }
-        // ----------------------------------
-        */
-
-
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext database;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext database)
         {
             _logger = logger;
+            this.database = database;
         }
 
-        //----------------   Chamar as paginas   ----------------
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await database.Evento.ToListAsync());
         }
         
        

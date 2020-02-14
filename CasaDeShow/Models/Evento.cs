@@ -24,11 +24,11 @@ namespace CasaDeShow.Models
         [Required(ErrorMessage = "Campo gênero da música necessário.")]
         public string GeneroMusica { get; set; }
         
-        [Required(ErrorMessage="Necessário casa de show para cadastrar evento",AllowEmptyStrings=false)]
+        // [Required(ErrorMessage="Necessário casa de show para cadastrar evento",AllowEmptyStrings=false)]
         // [ConcurrencyCheck]
         public int CasadeshowId { get; set; }
         
-        [Required(ErrorMessage="Necessário casa de show para cadastrar evento",AllowEmptyStrings=false)]
+        // [Required(ErrorMessage="Necessário casa de show para cadastrar evento",AllowEmptyStrings=false)]
         // [ConcurrencyCheck]
         public Casadeshow Casadeshow { get; set; }
     }
