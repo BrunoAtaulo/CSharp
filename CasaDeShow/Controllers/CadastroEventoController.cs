@@ -47,7 +47,7 @@ namespace CasaDeShow.Controllers
         }
 
         // GET: CadastroEvento/Create
-        [Route("evento/criar")]
+        // [Route("evento/criar")]
         public IActionResult Create()
         {
             if (_context.Casadeshow.Count() == 0)
@@ -84,7 +84,7 @@ namespace CasaDeShow.Controllers
         }
 
         // GET: CadastroEvento/Edit/5
-        [Route("evento/editar")]
+        // [Route("evento/editar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -138,7 +138,7 @@ namespace CasaDeShow.Controllers
         }
 
         // GET: CadastroEvento/Delete/5
-        [Route("evento/deletar")]
+        // [Route("evento/deletar")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

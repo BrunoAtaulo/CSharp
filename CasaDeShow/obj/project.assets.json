@@ -468,7 +468,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -8674,6 +8674,7 @@
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.1",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.1",
+      "Microsoft.EntityFrameworkCore.Design >= 3.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.1",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
@@ -8686,11 +8687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\CasaDeShow.csproj",
+      "projectUniqueName": "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\CasaDeShow.csproj",
       "projectName": "CasaDeShow",
-      "projectPath": "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\CasaDeShow.csproj",
+      "projectPath": "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\CasaDeShow.csproj",
       "packagesPath": "C:\\Users\\BSBO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\obj\\",
+      "outputPath": "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BSBO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -8724,6 +8725,12 @@
             "version": "[3.1.1, )"
           },
           "Microsoft.AspNetCore.Identity.UI": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.1, )"
           },

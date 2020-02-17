@@ -68,7 +68,10 @@ body {
   line-height: 1.5;
   color: #495057;
   text-align: left;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-image: url("~/../../../../../Imagens/show1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -164,6 +167,7 @@ a {
   color: #2FA4E7;
   text-decoration: none;
   background-color: transparent;
+  text-shadow: 0px 1px 10px #ffffff;
 }
 
 a:hover {
@@ -1933,7 +1937,9 @@ pre code {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #c5e6f8;
+  /* background-color: #c5e6f8; */
+  /* background-color: #00afff; */
+  background-color: #73cbfb;
 }
 
 .table-primary th,
@@ -10475,6 +10481,11 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-devclub{
+  font-family: 'Metal Mania', cursive;
+  font-size: 1.62em;
 }
 
 @media (min-width: 576px) {

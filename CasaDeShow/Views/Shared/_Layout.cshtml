@@ -12,6 +12,7 @@
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-cerulean.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -19,7 +20,8 @@
         @* ----------------------- MENU ----------------------- *@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-darkblue border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CasaDeShow</a>
+                <img src="../../../imagens/guitarra1.png">
+                <a class="navbar-brand icone-dev text-devclub" asp-area="" asp-controller="Home" asp-action="Index">DEVCLUB</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,7 +47,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Historico" asp-action="Historico">Historico</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -60,7 +61,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy;CasaDeShow - 2020.
+            &copy;<label class="text-devclub" style="font-size: 20px">DEVCLUB</label> - 2020.
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -1,36 +1,43 @@
 ﻿@model IEnumerable<CasaDeShow.Models.Evento>
-
-<h2>Eventos</h2>
-<hr/>
+<h2 class="fonte-clara">Eventos</h2>
 
 @* @TempData["ErroCasa"] *@
 
-<table class="table">
+<table class="table table-hover">
     <thead>
-        <tr>
+        <tr class="table-dark text-center">
             <th>
-                @Html.DisplayNameFor(model => model.NomeEvento)
+                @* @Html.DisplayNameFor(model => model.NomeEvento) *@
+               Evento
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Capacidade)
+                @* @Html.DisplayNameFor(model => model.Capacidade) *@
+                Capacidade
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Data)
+                @* @Html.DisplayNameFor(model => model.Data) *@
+                Data
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ValorIngresso)
+                @* @Html.DisplayNameFor(model => model.ValorIngresso) *@
+                Valor do ingresso
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Casadeshow)
+                @* @Html.DisplayNameFor(model => model.Casadeshow) *@
+                Local
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GeneroMusica)
+                @* @Html.DisplayNameFor(model => model.GeneroMusica) *@
+                Gênero musical
+            </th>
+            <th>
+
             </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model) {
-        <tr>
+        <tr class="table-primary">
             <td>
                 @Html.DisplayFor(modelItem => item.NomeEvento)
             </td>
@@ -49,7 +56,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.GeneroMusica)
             </td>
-            <td><button type="submit" class="btn btn-primary">Comprar</button></td>
+            <td>
+                <button type="submit" class="btn btn-info">Comprar</button>
+            </td>
         </tr>
 }
     </tbody>

@@ -4,15 +4,15 @@
     ViewData["Title"] = "Evento";
 }
 
-<h1>Eventos</h1>
+<h1 class="fonte-clara">Eventos</h1>
 
 <p>
-    <a asp-action="Create">Criar novo evento</a>
+    <a class="badge badge-info" asp-action="Create">Criar novo evento</a>
 </p>
 @TempData["ErroCasa"]
-<table class="table">
+<table class="table table-hover">
     <thead>
-        <tr>
+        <tr class="table-dark text-center">
             <th>
                 @Html.DisplayNameFor(model => model.NomeEvento)
             </th>
@@ -36,7 +36,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr class="table-primary">
             <td>
                 @Html.DisplayFor(modelItem => item.NomeEvento)
             </td>

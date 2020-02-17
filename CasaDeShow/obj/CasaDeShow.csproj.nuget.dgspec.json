@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\CasaDeShow.csproj": {}
+    "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\CasaDeShow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\CasaDeShow.csproj": {
+    "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\CasaDeShow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\CasaDeShow.csproj",
+        "projectUniqueName": "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\CasaDeShow.csproj",
         "projectName": "CasaDeShow",
-        "projectPath": "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\CasaDeShow.csproj",
+        "projectPath": "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\CasaDeShow.csproj",
         "packagesPath": "C:\\Users\\BSBO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BSBO\\Desktop\\Projeto\\CasaDeShow\\obj\\",
+        "outputPath": "C:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BSBO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -45,6 +45,12 @@
               "version": "[3.1.1, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.1, )"
             },
