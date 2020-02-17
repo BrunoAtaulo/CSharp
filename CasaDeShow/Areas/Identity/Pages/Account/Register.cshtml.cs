@@ -81,7 +81,8 @@ namespace CasaDeShow.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
+                    // _logger.LogInformation("User created a new account with password.");
+                    _logger.LogInformation("Criado nova conta com senha.");
 
                     //----- Código para as Claims -----
                     await _userManager.AddClaimAsync(user, new Claim("NomeCompleto", Input.NomeCompleto));

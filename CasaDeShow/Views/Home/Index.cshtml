@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<CasaDeShow.Models.Evento>
-<h2 class="fonte-clara">Eventos</h2>
+<h1 class="fonte-clara">Eventos</h2>
 
 @* @TempData["ErroCasa"] *@
 
-<table class="table table-hover">
+<table class="table table-bordered table-hover">
     <thead>
         <tr class="table-dark text-center">
             <th>
@@ -37,7 +37,7 @@
     </thead>
     <tbody>
         @foreach (var item in Model) {
-        <tr class="table-primary">
+        <tr class="table-primary text-center">
             <td>
                 @Html.DisplayFor(modelItem => item.NomeEvento)
             </td>

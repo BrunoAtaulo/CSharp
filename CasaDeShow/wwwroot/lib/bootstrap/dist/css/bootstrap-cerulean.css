@@ -1892,7 +1892,9 @@ pre code {
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  /* border-bottom: 2px solid #dee2e6; */
+  border-bottom: 2px solid #044e96;
+  text-shadow: black 0.1em 0.1em 0.2em!important;
 }
 
 .table tbody + tbody {
@@ -1946,7 +1948,8 @@ pre code {
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #93d0f3;
+  /* border-color: #93d0f3; */
+  border-color: #044e96;
 }
 
 .table-hover .table-primary:hover {
@@ -10481,6 +10484,8 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
+  /* Coloquei para testar */
+  font-weight: bold;
 }
 
 .text-devclub{

@@ -9,7 +9,7 @@
 <p>
     <a class="badge badge-info" asp-action="Create">Cadastrar nova casa de show</a>
 </p>
-<table class="table table-hover">
+<table class="table table-bordered table-hover">
     <thead>
         <tr class="table-dark text-center">
             <th>
@@ -23,7 +23,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr class="table-primary">
+        <tr class="table-primary text-center">
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.Endereco)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                <a class="badge badge-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="badge badge-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a class="badge badge-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>
 }

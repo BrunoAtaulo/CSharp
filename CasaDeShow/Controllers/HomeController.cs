@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using CasaDeShow.Models;
 using CasaDeShow.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace CasaDeShow.Controllers
 {
@@ -16,14 +17,18 @@ namespace CasaDeShow.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext database;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext database)
+        private readonly UserManager<IdentityUser> _userManager;
+
+        public HomeController(UserManager<IdentityUser> userManager, ILogger<HomeController> logger, ApplicationDbContext database)
         {
+            _userManager = userManager;
             _logger = logger;
             this.database = database;
         }
 
         public async Task<IActionResult> Index()
         {
+            var user = await _userManager.GetUserAsync(User);
             ViewBag.CasaDeShow = database.Casadeshow.ToList();
             return View(await database.Evento.ToListAsync());
         }
