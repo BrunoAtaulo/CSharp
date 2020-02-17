@@ -10486,6 +10486,8 @@ button.bg-dark:focus {
 .text-devclub{
   font-family: 'Metal Mania', cursive;
   font-size: 1.62em;
+  text-shadow: 0px 1px 10px rgba(180, 201, 202, 0.945)!important;
+  text-decoration: underline overline;
 }
 
 @media (min-width: 576px) {
