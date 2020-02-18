@@ -10,6 +10,7 @@ using CasaDeShow.Models;
 
 namespace CasaDeShow.Controllers
 {
+    // [Route("evento")]
     public class CadastroEventoController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,15 +21,16 @@ namespace CasaDeShow.Controllers
         }
 
         // GET: CadastroEvento
-        [Route("evento")]
+        [Route("evento/index")]
         public async Task<IActionResult> Index()
         {
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(await _context.Evento.ToListAsync());
         }
         
-        [Route("evento/detalhes")]
+        
         // GET: CadastroEvento/Details/5
+        // [Route("evento/detalhes")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)

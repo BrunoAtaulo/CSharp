@@ -4,53 +4,37 @@
     ViewData["Title"] = "Detalhes";
 }
 
-<h1>Detalhes</h1>
-
-<div>
-    <h4>Evento</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeEvento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NomeEvento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Capacidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Capacidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Data)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Data)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ValorIngresso)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ValorIngresso)
-        </dd>
-
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Casadeshow)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Casadeshow.Nome)
-        </dd>
-
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GeneroMusica)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GeneroMusica)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
-    <a asp-action="Index">Voltar para a lista</a>
+<div class="row">
+    <div class="col-md-12">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header"><h1 style="text-align: center">Detalhes - Evento</h1></div>
+                <div class="card-body">
+                    <h4 class="card-title">
+                <div class="form-group">
+                <label class="fonte-clara" class="control-label">@Html.DisplayNameFor(model => model.NomeEvento):</label>
+                @Html.DisplayFor(model => model.NomeEvento)
+                </div>
+                <div class="form-group">
+                <label class="fonte-clara" class="control-label">@Html.DisplayNameFor(model => model.Capacidade):</label>
+                @Html.DisplayFor(model => model.Capacidade)
+                </div>
+                <div class="form-group">
+                <label class="fonte-clara" class="control-label">@Html.DisplayNameFor(model => model.Data):</label>
+                @Html.DisplayFor(model => model.Data)
+                </div>
+                <div class="form-group">
+                <label class="fonte-clara" class="control-label">@Html.DisplayNameFor(model => model.ValorIngresso):</label>
+                @Html.DisplayFor(model => model.ValorIngresso)
+                </div><div class="form-group">
+                <label class="fonte-clara" class="control-label">@Html.DisplayNameFor(model => model.Casadeshow):</label>
+                @Html.DisplayFor(model => model.Casadeshow.Nome)
+                </div><div class="form-group">
+                <label class="fonte-clara" class="control-label">@Html.DisplayNameFor(model => model.GeneroMusica):</label>
+                @Html.DisplayFor(model => model.GeneroMusica) 
+            </div>
+            <div>
+                <a class="badge badge-secondary" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+                <a class="badge badge-primary" asp-action="Index">Voltar para a lista</a>
+            </div>
+    </div>
 </div>
