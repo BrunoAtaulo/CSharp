@@ -1,17 +1,18 @@
 @model CasaDeShow.Models.Evento
 
 @{
-    ViewData["Title"] = "Criar Evento";
+    ViewData["Title"] = "Comprar";
 }
 
 <div class="row">
     <div class="col-md-12">
         <div class="card text-white bg-dark mb-3">
-                <div class="card-header"><h1 style="text-align: center">Criar - Evento</h1></div>
+                <div class="card-header"><h1 style="text-align: center">Editar - Evento</h1></div>
                 <div class="card-body">
                     <h4 class="card-title">
                         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="NomeEvento" class="control-label">Evento: </label>
                 <input asp-for="NomeEvento" class="form-control" />
@@ -44,7 +45,6 @@
             </div>            
             <div class="form-group">
                 <label asp-for="GeneroMusica" class="control-label"></label>
-                @* <input asp-for="GeneroMusica" class="form-control" /> *@
                 <select name="GeneroMusica">
                     <option value="Rock">Rock</option>
                     <option value="Pop">Pop</option>

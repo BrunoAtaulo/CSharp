@@ -168,6 +168,26 @@ namespace CasaDeShow.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Compra",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    QtdIngresso = table.Column<int>(nullable: false),
+                    IdentityUserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Compra", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Compra_AspNetUsers_IdentityUserId",
+                        column: x => x.IdentityUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Evento",
                 columns: table => new
                 {
@@ -189,6 +209,33 @@ namespace CasaDeShow.Migrations
                         principalTable: "Casadeshow",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ListaCompra",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CompraId = table.Column<int>(nullable: true),
+                    EventoId = table.Column<int>(nullable: true),
+                    Qtd = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ListaCompra", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ListaCompra_Compra_CompraId",
+                        column: x => x.CompraId,
+                        principalTable: "Compra",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ListaCompra_Evento_EventoId",
+                        column: x => x.EventoId,
+                        principalTable: "Evento",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -229,9 +276,24 @@ namespace CasaDeShow.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Compra_IdentityUserId",
+                table: "Compra",
+                column: "IdentityUserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Evento_CasadeshowId",
                 table: "Evento",
                 column: "CasadeshowId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ListaCompra_CompraId",
+                table: "ListaCompra",
+                column: "CompraId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ListaCompra_EventoId",
+                table: "ListaCompra",
+                column: "EventoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -252,10 +314,16 @@ namespace CasaDeShow.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Evento");
+                name: "ListaCompra");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Compra");
+
+            migrationBuilder.DropTable(
+                name: "Evento");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

@@ -10,11 +10,11 @@ using CasaDeShow.Models;
 
 namespace CasaDeShow.Controllers
 {
-    public class CadastroCasaShowController : Controller
+    public class CasaShowController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public CadastroCasaShowController(ApplicationDbContext context)
+        public CasaShowController(ApplicationDbContext context)
         {
             _context = context;
         }

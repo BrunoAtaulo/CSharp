@@ -10,18 +10,17 @@ using CasaDeShow.Models;
 
 namespace CasaDeShow.Controllers
 {
-    // [Route("evento")]
-    public class CadastroEventoController : Controller
+    
+    public class EventoController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public CadastroEventoController(ApplicationDbContext context)
+        public EventoController(ApplicationDbContext context)
         {
             _context = context;
         }
 
         // GET: CadastroEvento
-        [Route("evento/index")]
         public async Task<IActionResult> Index()
         {
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();
@@ -30,7 +29,6 @@ namespace CasaDeShow.Controllers
         
         
         // GET: CadastroEvento/Details/5
-        // [Route("evento/detalhes")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -49,7 +47,6 @@ namespace CasaDeShow.Controllers
         }
 
         // GET: CadastroEvento/Create
-        // [Route("evento/criar")]
         public IActionResult Create()
         {
             if (_context.Casadeshow.Count() == 0)
@@ -86,7 +83,6 @@ namespace CasaDeShow.Controllers
         }
 
         // GET: CadastroEvento/Edit/5
-        // [Route("evento/editar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -140,7 +136,6 @@ namespace CasaDeShow.Controllers
         }
 
         // GET: CadastroEvento/Delete/5
-        // [Route("evento/deletar")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

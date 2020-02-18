@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasaDeShow.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200216193620_createidentityschema")]
+    [Migration("20200218151005_createidentityschema")]
     partial class createidentityschema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,25 @@ namespace CasaDeShow.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Casadeshow");
+                });
+
+            modelBuilder.Entity("CasaDeShow.Models.Compra", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<int>("QtdIngresso")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdentityUserId");
+
+                    b.ToTable("Compra");
                 });
 
             modelBuilder.Entity("CasaDeShow.Models.Evento", b =>
@@ -69,6 +88,30 @@ namespace CasaDeShow.Migrations
                     b.HasIndex("CasadeshowId");
 
                     b.ToTable("Evento");
+                });
+
+            modelBuilder.Entity("CasaDeShow.Models.ListaCompra", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CompraId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EventoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Qtd")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompraId");
+
+                    b.HasIndex("EventoId");
+
+                    b.ToTable("ListaCompra");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -267,6 +310,13 @@ namespace CasaDeShow.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("CasaDeShow.Models.Compra", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
+                });
+
             modelBuilder.Entity("CasaDeShow.Models.Evento", b =>
                 {
                     b.HasOne("CasaDeShow.Models.Casadeshow", "Casadeshow")
@@ -274,6 +324,17 @@ namespace CasaDeShow.Migrations
                         .HasForeignKey("CasadeshowId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CasaDeShow.Models.ListaCompra", b =>
+                {
+                    b.HasOne("CasaDeShow.Models.Compra", "Compra")
+                        .WithMany()
+                        .HasForeignKey("CompraId");
+
+                    b.HasOne("CasaDeShow.Models.Evento", "Evento")
+                        .WithMany()
+                        .HasForeignKey("EventoId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

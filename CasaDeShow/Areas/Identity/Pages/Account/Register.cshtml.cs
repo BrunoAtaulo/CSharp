@@ -63,6 +63,7 @@ namespace CasaDeShow.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
 
             //Inserir os campos para poder gerar as Claims
+            [Required]
             public string NomeCompleto { get; set; }
             public bool Adm { get; set; }
         }
