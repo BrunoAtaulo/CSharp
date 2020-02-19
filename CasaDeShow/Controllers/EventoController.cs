@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CasaDeShow.Data;
 using CasaDeShow.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CasaDeShow.Controllers
 {
-    
+    [Authorize]
     public class EventoController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -62,6 +63,14 @@ namespace CasaDeShow.Controllers
                 return View();
             }
         }
+
+        //---------- Compra ----------
+        public IActionResult Compra()
+        {
+            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
+            return View();
+        }
+
 
         // POST: CadastroEvento/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

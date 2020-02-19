@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CasaDeShow.Data;
 using CasaDeShow.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CasaDeShow.Controllers
 {
+    [Authorize]
     public class CasaShowController : Controller
     {
         private readonly ApplicationDbContext _context;
