@@ -65,10 +65,11 @@ namespace CasaDeShow.Controllers
         }
 
         //---------- Compra ----------
-        public IActionResult Compra()
+        public async Task<IActionResult> CompraAsync(int? id)
         {
+            var evento = await _context.Evento.FindAsync(id);
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();
-            return View();
+            return View(evento);
         }
 
 
