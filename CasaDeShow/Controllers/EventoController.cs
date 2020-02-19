@@ -24,6 +24,7 @@ namespace CasaDeShow.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();
+            ViewBag.contagem = _context.Casadeshow.Count();
             return View(await _context.Evento.ToListAsync());
         }
         
@@ -52,6 +53,7 @@ namespace CasaDeShow.Controllers
             if (_context.Casadeshow.Count() == 0)
             {
                 TempData["ErroCasa"]="Necessário ter casa de show para cadastrar evento";
+               
                 return RedirectToAction(nameof(Index));
             }
             else
