@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\CasaDeShow.csproj",
+  "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\CasaDeShow.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20501,142 +20501,142 @@
   "RootNamespace": "CasaDeShow",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\CasaShow\\Index.cshtml",
-      "TargetPath": "Views\\CasaShow\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Evento\\Create.cshtml",
-      "TargetPath": "Views\\Evento\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Shared\\OLD_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\OLD_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Evento\\Delete.cshtml",
-      "TargetPath": "Views\\Evento\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Evento\\Edit.cshtml",
-      "TargetPath": "Views\\Evento\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Historico\\Historico.cshtml",
-      "TargetPath": "Views\\Historico\\Historico.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\CasaShow\\Details.cshtml",
-      "TargetPath": "Views\\CasaShow\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Shared\\_LoginPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\CasaShow\\Create.cshtml",
-      "TargetPath": "Views\\CasaShow\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\CasaShow\\Delete.cshtml",
-      "TargetPath": "Views\\CasaShow\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\CasaShow\\Edit.cshtml",
-      "TargetPath": "Views\\CasaShow\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Evento\\Compra.cshtml",
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Evento\\Delete.cshtml",
+      "TargetPath": "Views\\Evento\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\CasaShow\\Create.cshtml",
+      "TargetPath": "Views\\CasaShow\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\CasaShow\\Edit.cshtml",
+      "TargetPath": "Views\\CasaShow\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Evento\\Create.cshtml",
+      "TargetPath": "Views\\Evento\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Evento\\Compra.cshtml",
       "TargetPath": "Views\\Evento\\Compra.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Evento\\Details.cshtml",
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Evento\\Details.cshtml",
       "TargetPath": "Views\\Evento\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Shared\\Azul-arrumar_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\Azul-arrumar_Layout.cshtml",
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Evento\\Edit.cshtml",
+      "TargetPath": "Views\\Evento\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\CasaShow\\Details.cshtml",
+      "TargetPath": "Views\\CasaShow\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\CasaShow\\Index.cshtml",
+      "TargetPath": "Views\\CasaShow\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\BSBO\\Desktop\\Github ok\\CasaDeShow\\Views\\Evento\\Index.cshtml",
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\CasaShow\\Delete.cshtml",
+      "TargetPath": "Views\\CasaShow\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Shared\\Azul-arrumar_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\Azul-arrumar_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Shared\\OLD_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\OLD_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Historico\\Historico.cshtml",
+      "TargetPath": "Views\\Historico\\Historico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BSBO\\Desktop\\Final\\CasaDeShow\\Views\\Evento\\Index.cshtml",
       "TargetPath": "Views\\Evento\\Index.cshtml",
       "FileKind": "mvc"
     }

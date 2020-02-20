@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CasaDeShow.Controllers
 {
-    [Authorize]
     public class EventoController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -64,25 +63,16 @@ namespace CasaDeShow.Controllers
             }
         }
 
-        //---------- Compra ----------Alterar
-        public async Task<IActionResult> CompraAsync(int? id)
-        {
-            var evento = await _context.Evento.FindAsync(id);
-            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
-            return View(evento);
-        }
-        
-
-
         // POST: CadastroEvento/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeEvento,Capacidade,Data,ValorIngresso,GeneroMusica,CasadeshowId")] Evento evento)
+        public async Task<IActionResult> Create([Bind("Id,NomeEvento,Capacidade,Data,ValorIngresso,GeneroMusica,CasadeshowId,IngressosRestantes")] Evento evento)
         {
             if (ModelState.IsValid)
             {
+                evento.IngressosRestantes = evento.Capacidade;
                 
                 _context.Add(evento);
                 await _context.SaveChangesAsync();
@@ -94,6 +84,53 @@ namespace CasaDeShow.Controllers
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(evento);
         }
+
+         //---------- Compra ----------
+        public async Task<IActionResult> Compra1Async(int? id)
+        {
+            var evento = await _context.Evento.FindAsync(id);
+            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
+            
+            // if (quantidade > 0 && ingressorestante>= quantidade)
+            //     ingressorestante -= quantidade
+
+            return View(evento);
+        }
+
+        public async Task<IActionResult> Compra(int id)
+        {
+            var evento = _context.Evento.First(e => e.Id == id);
+            if (ModelState.IsValid)
+            {
+
+                try
+                {
+                    if (evento.Quantidade > 0 && evento.IngressosRestantes >= evento.Quantidade)
+                    {
+                        evento.IngressosRestantes -= evento.Quantidade;
+                    } 
+
+                    _context.Update(evento);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!EventoExists(evento.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewBag.CasaDeShow = _context.Casadeshow.ToList();
+            return View(evento);
+        }
+
+        
 
         // GET: CadastroEvento/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -108,6 +145,7 @@ namespace CasaDeShow.Controllers
             {
                 return NotFound();
             }
+
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(evento);
         }
@@ -117,7 +155,7 @@ namespace CasaDeShow.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeEvento,Capacidade,Data,ValorIngresso,GeneroMusica,CasadeshowId")] Evento evento)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeEvento,Capacidade,Data,ValorIngresso,GeneroMusica,CasadeshowId,Quantidade,IngressosRestantes")] Evento evento)
         {
             if (id != evento.Id)
             {
@@ -128,6 +166,11 @@ namespace CasaDeShow.Controllers
             {
                 try
                 {
+                     if (evento.Quantidade > 0 && evento.IngressosRestantes >= evento.Quantidade)
+                     {
+                         evento.IngressosRestantes -= evento.Quantidade;
+                     } 
+
                     _context.Update(evento);
                     await _context.SaveChangesAsync();
                 }
