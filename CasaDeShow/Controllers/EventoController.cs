@@ -64,13 +64,14 @@ namespace CasaDeShow.Controllers
             }
         }
 
-        //---------- Compra ----------
+        //---------- Compra ----------Alterar
         public async Task<IActionResult> CompraAsync(int? id)
         {
             var evento = await _context.Evento.FindAsync(id);
             ViewBag.CasaDeShow = _context.Casadeshow.ToList();
             return View(evento);
         }
+        
 
 
         // POST: CadastroEvento/Create
