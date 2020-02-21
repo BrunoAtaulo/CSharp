@@ -53,7 +53,7 @@ namespace CasaDeShow.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(maxLength: 50, nullable: false),
+                    Nome = table.Column<string>(nullable: false),
                     Endereco = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -173,18 +173,25 @@ namespace CasaDeShow.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    QtdIngresso = table.Column<int>(nullable: false),
-                    IdentityUserId = table.Column<string>(nullable: true)
+                    NomeEvento = table.Column<string>(nullable: false),
+                    Capacidade = table.Column<int>(nullable: false),
+                    Data = table.Column<DateTime>(nullable: false),
+                    ValorIngresso = table.Column<double>(nullable: false),
+                    GeneroMusica = table.Column<string>(nullable: false),
+                    CasadeshowId = table.Column<int>(nullable: false),
+                    Quantidade = table.Column<int>(nullable: false),
+                    IngressosRestantes = table.Column<int>(nullable: false),
+                    IdentityUser = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Compra", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Compra_AspNetUsers_IdentityUserId",
-                        column: x => x.IdentityUserId,
-                        principalTable: "AspNetUsers",
+                        name: "FK_Compra_Casadeshow_CasadeshowId",
+                        column: x => x.CasadeshowId,
+                        principalTable: "Casadeshow",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -193,12 +200,13 @@ namespace CasaDeShow.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NomeEvento = table.Column<string>(maxLength: 50, nullable: false),
+                    NomeEvento = table.Column<string>(nullable: false),
                     Capacidade = table.Column<int>(nullable: false),
                     Data = table.Column<DateTime>(nullable: false),
                     ValorIngresso = table.Column<double>(nullable: false),
                     GeneroMusica = table.Column<string>(nullable: false),
                     CasadeshowId = table.Column<int>(nullable: false),
+                    Quantidade = table.Column<int>(nullable: false),
                     IngressosRestantes = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -277,9 +285,9 @@ namespace CasaDeShow.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Compra_IdentityUserId",
+                name: "IX_Compra_CasadeshowId",
                 table: "Compra",
-                column: "IdentityUserId");
+                column: "CasadeshowId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Evento_CasadeshowId",
@@ -321,13 +329,13 @@ namespace CasaDeShow.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
+                name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
                 name: "Compra");
 
             migrationBuilder.DropTable(
                 name: "Evento");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "Casadeshow");

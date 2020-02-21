@@ -44,7 +44,6 @@
             </div>            
             <div class="form-group">
                 <label asp-for="GeneroMusica" class="control-label"></label>
-                @* <input asp-for="GeneroMusica" class="form-control" /> *@
                 <select name="GeneroMusica">
                     <option value="Rock">Rock</option>
                     <option value="Pop">Pop</option>
@@ -57,7 +56,6 @@
                 </select>
                 <span asp-validation-for="GeneroMusica" class="text-danger"></span>
             </div>
-          
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-success" /> |
                 <a class="badge badge-primary" asp-action="Index">Voltar para a lista</a>

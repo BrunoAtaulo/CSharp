@@ -30,8 +30,8 @@ namespace CasaDeShow
             //Configurando banco de dados
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
-                    // Configuration.GetConnectionString("DefaultConnection")));
-                    Configuration.GetConnectionString("teste")));
+                    Configuration.GetConnectionString("DefaultConnection")));
+                    // Configuration.GetConnectionString("teste")));
 
             /*services.AddDefaultIdentity<IdentityUser>(config => {
                 config.Password.RequireNonAlphanumeric = false;

@@ -6,7 +6,7 @@ namespace CasaDeShow.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Campo nome do evento necessário.", AllowEmptyStrings = false), StringLength(50)]
+        [Required(ErrorMessage = "Campo nome do evento necessário.", AllowEmptyStrings = false)]
         public string NomeEvento { get; set; }
 
         [Range(10, 200000, ErrorMessage = "Campo capacidade inválido.")]
@@ -31,7 +31,7 @@ namespace CasaDeShow.Models
         // [Required(ErrorMessage="Necessário casa de show para cadastrar evento",AllowEmptyStrings=false)]
         // [ConcurrencyCheck]
         public Casadeshow Casadeshow { get; set; }
-        public int IngressosRestantes { get; set; }
         public int Quantidade { get; set; }
+        public int IngressosRestantes { get; set; }
     }
 }

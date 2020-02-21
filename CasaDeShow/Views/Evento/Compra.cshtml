@@ -1,4 +1,8 @@
-@model CasaDeShow.Models.Evento
+@model CasaDeShow.Models.Compra
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @{
     ViewData["Title"] = "Comprar";
@@ -10,9 +14,9 @@
                 <div class="card-header"><h1 style="text-align: center">Comprar</h1></div>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <form asp-action="Compra">
+                        <form asp-action="ConfirmaCompra">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+            <input readonly type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="NomeEvento" class="control-label">Evento: </label>
                 <input readonly asp-for="NomeEvento" class="form-control" />
@@ -45,23 +49,31 @@
             </div>            
             <div class="form-group">
                 <label asp-for="GeneroMusica" class="control-label"></label>
-                <input readonly asp-for="GeneroMusica" class="form-control">
+                <select name="GeneroMusica">
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Pagode">Pagode</option>
+                    <option value="Samba">Samba</option>
+                    <option value="Axe">Axé</option>
+                    <option value="Gospel">Gospel</option>
+                    <option value="Forro">Forró</option>
+                    <option value="Funk">Funk</option>
+                </select>
                 <span asp-validation-for="GeneroMusica" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IngressosRestantes" class="control-label">Ingressos Restantes: </label>
-                <input readonly asp-for="IngressosRestantes" class="form-control"/>
+                <input readonly asp-for="IngressosRestantes" class="form-control" />
                 <span asp-validation-for="IngressosRestantes" class="text-danger"></span>
             </div>
-
-             <div class="form-group">
-                <label asp-for="Quantidade" class="control-label">Quantidade de ingressos: </label>
-                <input asp-for="Quantidade" class="form-control" value="0" />
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label">Quantidade: </label>
+                <input asp-for="Quantidade" class="form-control" placeholder="0" value="1" min="1" max="@Model.IngressosRestantes" />
                 <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
-
+            <label type="hidden" asp-for="IdentityUser" class="control-label"></label>
             <div class="form-group">
-                <input type="submit" value="Comprar" class="btn btn-success" /> |
+                <input type="submit" value="Salvar" class="btn btn-success" /> |
                 <a class="badge badge-primary" asp-action="Index">Voltar para a lista</a>
             </div>
         </form>

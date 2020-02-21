@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CasaDeShow.Controllers
 {
-    
+    [Authorize(Policy="Gerenciador")]
     public class CasaShowController : Controller
     {
         private readonly ApplicationDbContext _context;

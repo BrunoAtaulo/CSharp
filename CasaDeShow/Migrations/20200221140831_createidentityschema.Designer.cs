@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasaDeShow.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200220125629_createidentityschema")]
+    [Migration("20200221140831_createidentityschema")]
     partial class createidentityschema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,8 +31,7 @@ namespace CasaDeShow.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(50) CHARACTER SET utf8mb4")
-                        .HasMaxLength(50);
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
@@ -45,15 +44,38 @@ namespace CasaDeShow.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("IdentityUserId")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
-
-                    b.Property<int>("QtdIngresso")
+                    b.Property<int>("Capacidade")
                         .HasColumnType("int");
+
+                    b.Property<int>("CasadeshowId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Data")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("GeneroMusica")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("IdentityUser")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("IngressosRestantes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeEvento")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.Property<double>("ValorIngresso")
+                        .HasColumnType("double");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdentityUserId");
+                    b.HasIndex("CasadeshowId");
 
                     b.ToTable("Compra");
                 });
@@ -82,8 +104,10 @@ namespace CasaDeShow.Migrations
 
                     b.Property<string>("NomeEvento")
                         .IsRequired()
-                        .HasColumnType("varchar(50) CHARACTER SET utf8mb4")
-                        .HasMaxLength(50);
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
 
                     b.Property<double>("ValorIngresso")
                         .HasColumnType("double");
@@ -317,9 +341,11 @@ namespace CasaDeShow.Migrations
 
             modelBuilder.Entity("CasaDeShow.Models.Compra", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                    b.HasOne("CasaDeShow.Models.Casadeshow", "Casadeshow")
                         .WithMany()
-                        .HasForeignKey("IdentityUserId");
+                        .HasForeignKey("CasadeshowId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CasaDeShow.Models.Evento", b =>
