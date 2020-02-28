@@ -3,6 +3,8 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using PrimeiroProjeto.Data;
 using PrimeiroProjeto.Models;
+using PrimeiroProjeto.HATEOAS;
+using System.Collections.Generic;
 
 namespace PrimeiroProjeto.Controllers
 {
@@ -13,9 +15,14 @@ namespace PrimeiroProjeto.Controllers
     {
         // Injetando banco de dados no controller para poder salvar no MySQL
         private readonly ApplicationDbContext database;
+        private HATEOAS.HATEOAS HATEOAS;
         public ProdutosController(ApplicationDbContext database)
         {
             this.database = database;
+            HATEOAS = new HATEOAS.HATEOAS("localhost:5001/api/v1/Produtos");
+            HATEOAS.AddAction("GET_INFO","GET");
+            HATEOAS.AddAction("DELETE_PRODUCT","DELETE");
+            HATEOAS.AddAction("EDIT_PRODUCT","PATCH");
         }
 
 
@@ -24,7 +31,15 @@ namespace PrimeiroProjeto.Controllers
         public IActionResult Get()
         {
             var produtos = database.Produtos.ToList();
-            return Ok(produtos); //Retornar JSON
+            List<ProdutoContainer> produtosHATEOAS = new List<ProdutoContainer>();
+            foreach (var prod in produtos)
+            {
+                ProdutoContainer produtoHATEOAS = new ProdutoContainer();
+                produtoHATEOAS.produto = prod;
+                produtoHATEOAS.links = HATEOAS.GetActions(prod.Id.ToString());
+                produtosHATEOAS.Add(produtoHATEOAS);
+            }
+            return Ok(produtosHATEOAS); //Retornar JSON
         }
 
 
@@ -35,7 +50,12 @@ namespace PrimeiroProjeto.Controllers
             try
             {
                 var produto = database.Produtos.First(p => p.Id == id);
-                return Ok(produto);
+                // Colocando o HATEOAS
+                ProdutoContainer produtoHATEOAS = new ProdutoContainer();
+                produtoHATEOAS.produto = produto;
+                produtoHATEOAS.links = HATEOAS.GetActions(produto.Id.ToString());
+
+                return Ok(produtoHATEOAS);
 
             }
             catch (Exception e)
@@ -146,6 +166,12 @@ namespace PrimeiroProjeto.Controllers
         {
             public string Nome { get; set; }
             public float Preco { get; set; }
+        }
+
+        public class ProdutoContainer
+        {
+            public Produto produto { get; set; }
+            public Link[] links { get; set; }
         }
     }
 }
