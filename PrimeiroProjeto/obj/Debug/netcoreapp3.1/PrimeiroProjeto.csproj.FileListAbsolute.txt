@@ -110,3 +110,8 @@ C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.Exte
 C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
