@@ -5,11 +5,13 @@ using PrimeiroProjeto.Data;
 using PrimeiroProjeto.Models;
 using PrimeiroProjeto.HATEOAS;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PrimeiroProjeto.Controllers
 {
     [Route("api/v1/[controller]")]
     // [Route("api/PegarProdutos")]
+    // [Authorize]
     [ApiController]
     public class ProdutosController : ControllerBase
     {
