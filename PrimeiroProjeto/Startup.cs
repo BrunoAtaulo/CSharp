@@ -35,7 +35,7 @@ namespace PrimeiroProjeto
             services.AddControllers();
 
             // Adicionando string de chave de seguranca para o JWT
-            string chavedeseguranca = "chave_de_seguranca_jwt";
+            string chavedeseguranca = "BrunoZicaDosRoles";
             var chaveSimetrica = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(chavedeseguranca));
             // Diz para o sistema que usamos JWT como autenticação
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>

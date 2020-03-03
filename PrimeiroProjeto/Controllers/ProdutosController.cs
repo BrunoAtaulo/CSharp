@@ -11,7 +11,7 @@ namespace PrimeiroProjeto.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize(Roles="Admin")]
     public class ProdutosController : ControllerBase
     {
         // Injetando banco de dados no controller para poder salvar no MySQL
@@ -21,11 +21,18 @@ namespace PrimeiroProjeto.Controllers
         {
             this.database = database;
             HATEOAS = new HATEOAS.HATEOAS("localhost:5001/api/v1/Produtos");
-            HATEOAS.AddAction("GET_INFO","GET");
-            HATEOAS.AddAction("DELETE_PRODUCT","DELETE");
-            HATEOAS.AddAction("EDIT_PRODUCT","PATCH");
+            HATEOAS.AddAction("GET_INFO", "GET");
+            HATEOAS.AddAction("DELETE_PRODUCT", "DELETE");
+            HATEOAS.AddAction("EDIT_PRODUCT", "PATCH");
         }
+        [HttpGet("teste")]
+        public IActionResult TesteClaims()
+        {
+            // Comparar 2 strings ignorando acento, letra maiuscula ou minuscula
+            // var resposta = HttpContext.User.Claims.First(claim => claim.Type.ToString().Equals("id", StringComparison.InvariantCultureIgnoreCase)).Value;
 
+            return Ok(HttpContext.User.Claims.First(claim => claim.Type.ToString().Equals("id", StringComparison.InvariantCultureIgnoreCase)).Value);
+        }
 
         // Listando todos os produtos
         [HttpGet]
@@ -59,7 +66,7 @@ namespace PrimeiroProjeto.Controllers
                 return Ok(produtoHATEOAS);
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Response.StatusCode = 404;
                 return new ObjectResult("");
@@ -84,12 +91,6 @@ namespace PrimeiroProjeto.Controllers
                 return new ObjectResult("");
             }
         }
-
-        // [HttpPost]
-        // public IActionResult Post()
-        // {
-        //     return Ok("Tudo normal"); //Exemplo normal de POST
-        // }
 
         [HttpPost]
         public IActionResult Post([FromBody] ProdutoTemp pTemp)

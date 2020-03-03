@@ -6,6 +6,8 @@ using PrimeiroProjeto.Models;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using System;
+using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace PrimeiroProjeto.Controllers
 {
@@ -42,16 +44,23 @@ namespace PrimeiroProjeto.Controllers
                         // Usuário acertou a senha e logou
 
                         // Chave de segurança (token)
-                        string chavedeseguranca = "chave_de_seguranca_jwt";
+                        string chavedeseguranca = "BrunoZicaDosRoles";
                         // Encriptar a chave usando algoritmo simétrico (mesma chave para encriptar e decriptar)
                         var chaveSimetrica = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(chavedeseguranca));
                         var credenciaisdeacesso = new SigningCredentials(chaveSimetrica, SecurityAlgorithms.HmacSha256Signature);
+
+                        // Criando claims
+                        var claims = new List<Claim>();
+                        claims.Add(new Claim("id", usuario.Id.ToString()));
+                        claims.Add(new Claim("email", usuario.Email));
+                        claims.Add(new Claim(ClaimTypes.Role, "Admin"));
 
                         var JWT = new JwtSecurityToken(
                             issuer: "Bruno", // Quem fornece o JWT para o usuário
                             expires: DateTime.Now.AddHours(1), // 1 Hora a partir da data para expirar
                             audience: "usuario_comum", // Para quem é destinado o token
-                            signingCredentials: credenciaisdeacesso
+                            signingCredentials: credenciaisdeacesso,
+                            claims: claims
                         );
                         return Ok(new JwtSecurityTokenHandler().WriteToken(JWT));
 
@@ -70,7 +79,7 @@ namespace PrimeiroProjeto.Controllers
                     return new ObjectResult("");
                 }
             }
-            catch (System.Exception e)
+            catch (System.Exception)
             {
                 // Não existe usuário com este e-mail
                 Response.StatusCode = 401;
