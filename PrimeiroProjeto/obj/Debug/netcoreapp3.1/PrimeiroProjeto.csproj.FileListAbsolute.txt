@@ -115,3 +115,10 @@ C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Swashbuckle.As
 C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\BSBO\Desktop\API\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\BSBO\Desktop\API\PrimeiroProjeto\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

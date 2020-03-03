@@ -10,9 +10,8 @@ using Microsoft.AspNetCore.Authorization;
 namespace PrimeiroProjeto.Controllers
 {
     [Route("api/v1/[controller]")]
-    // [Route("api/PegarProdutos")]
-    // [Authorize]
     [ApiController]
+    [Authorize]
     public class ProdutosController : ControllerBase
     {
         // Injetando banco de dados no controller para poder salvar no MySQL

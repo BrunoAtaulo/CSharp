@@ -1,7 +1,11 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using PrimeiroProjeto.Data;
 using PrimeiroProjeto.Models;
+using System.Text;
+using System.IdentityModel.Tokens.Jwt;
+using System;
 
 namespace PrimeiroProjeto.Controllers
 {
@@ -36,7 +40,21 @@ namespace PrimeiroProjeto.Controllers
                     if (usuario.Senha.Equals(credenciais.Senha))
                     {
                         // Usuário acertou a senha e logou
-                        return Ok("Logado"); //Gerar token JWT
+
+                        // Chave de segurança (token)
+                        string chavedeseguranca = "chave_de_seguranca_jwt";
+                        // Encriptar a chave usando algoritmo simétrico (mesma chave para encriptar e decriptar)
+                        var chaveSimetrica = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(chavedeseguranca));
+                        var credenciaisdeacesso = new SigningCredentials(chaveSimetrica, SecurityAlgorithms.HmacSha256Signature);
+
+                        var JWT = new JwtSecurityToken(
+                            issuer: "Bruno", // Quem fornece o JWT para o usuário
+                            expires: DateTime.Now.AddHours(1), // 1 Hora a partir da data para expirar
+                            audience: "usuario_comum", // Para quem é destinado o token
+                            signingCredentials: credenciaisdeacesso
+                        );
+                        return Ok(new JwtSecurityTokenHandler().WriteToken(JWT));
+
                     }
                     else
                     {
