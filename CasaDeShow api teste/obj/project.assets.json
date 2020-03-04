@@ -8803,11 +8803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BSBO\\Desktop\\subir\\CasaDeShow api teste\\CasaDeShow.csproj",
+      "projectUniqueName": "c:\\Users\\BSBO\\Desktop\\Projeto Casa API\\CasaDeShow\\CasaDeShow.csproj",
       "projectName": "CasaDeShow",
-      "projectPath": "C:\\Users\\BSBO\\Desktop\\subir\\CasaDeShow api teste\\CasaDeShow.csproj",
+      "projectPath": "c:\\Users\\BSBO\\Desktop\\Projeto Casa API\\CasaDeShow\\CasaDeShow.csproj",
       "packagesPath": "C:\\Users\\BSBO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BSBO\\Desktop\\subir\\CasaDeShow api teste\\obj\\",
+      "outputPath": "c:\\Users\\BSBO\\Desktop\\Projeto Casa API\\CasaDeShow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BSBO\\AppData\\Roaming\\NuGet\\NuGet.Config"
