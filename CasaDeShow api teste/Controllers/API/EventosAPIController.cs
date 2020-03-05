@@ -36,9 +36,7 @@ namespace CasaDeShow.Controllers.API
         }
 
 
-        ///<summary>
-        ///Cria evento.
-        ///</summary>
+        ///<summary> Cria evento. </summary>
         [HttpPost]
         public IActionResult Post([FromBody] eventoTemp etemp)
         {
@@ -91,8 +89,8 @@ namespace CasaDeShow.Controllers.API
             return Ok(eventos);
         }
 
-        [HttpPatch]
-        public IActionResult Patch([FromBody] eventoTemp etemp, int id)
+        [HttpPut]
+        public IActionResult Put([FromBody] eventoTemp etemp, int id)
         {
             var ev = database.Evento.First(evtemp => evtemp.Id == etemp.Id);
             ev.NomeEvento = etemp.NomeEvento != null ? etemp.NomeEvento : ev.NomeEvento;
@@ -139,6 +137,87 @@ namespace CasaDeShow.Controllers.API
             return Ok();
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                var ev = database.Evento.First(evtemp => evtemp.Id == id);
+                database.Evento.Remove(ev);
+                database.SaveChanges();
+                return Ok();
+
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult("");
+            }
+        }
+
+        [Route("Capacidade/ASC")]
+        [HttpGet]
+        public IActionResult CapacidadeASC()
+        {
+            var evento = database.Evento.OrderBy(evento => evento.Capacidade).ToList();
+            return Ok(evento);
+        }
+
+        [Route("Capacidade/DESC")]
+        [HttpGet]
+        public IActionResult CapacidadeDESC()
+        {
+            var evento = database.Evento.OrderByDescending(evento => evento.Capacidade).ToList();
+            return Ok(evento);
+        }
+
+        [Route("Data/ASC")]
+        [HttpGet]
+        public IActionResult DataASC()
+        {
+            var evento = database.Evento.OrderBy(evento => evento.Data).ToList();
+            return Ok(evento);
+        }
+
+        [Route("Data/DESC")]
+        [HttpGet]
+        public IActionResult DataDESC()
+        {
+            var evento = database.Evento.OrderByDescending(evento => evento.Data).ToList();
+            return Ok(evento);
+        }
+
+        [Route("Nome/ASC")]
+        [HttpGet]
+        public IActionResult NomeASC()
+        {
+            var evento = database.Evento.OrderBy(evento => evento.NomeEvento).ToList();
+            return Ok(evento);
+        }
+
+        [Route("Nome/DESC")]
+        [HttpGet]
+        public IActionResult NomeDESC()
+        {
+            var evento = database.Evento.OrderByDescending(evento => evento.NomeEvento).ToList();
+            return Ok(evento);
+        }
+
+        [Route("Preco/ASC")]
+        [HttpGet]
+        public IActionResult PrecoASC()
+        {
+            var evento = database.Evento.OrderBy(evento => evento.ValorIngresso).ToList();
+            return Ok(evento);
+        }
+
+        [Route("Preco/DESC")]
+        [HttpGet]
+        public IActionResult PrecoDESC()
+        {
+            var evento = database.Evento.OrderByDescending(evento => evento.ValorIngresso).ToList();
+            return Ok(evento);
+        }
 
         public class eventoTemp
         {
@@ -150,8 +229,5 @@ namespace CasaDeShow.Controllers.API
             public int GeneroMusica { get; set; }
             public int CasadeshowId { get; set; }
         }
-
-
-
     }
 }
