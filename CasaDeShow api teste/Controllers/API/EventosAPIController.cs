@@ -13,6 +13,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CasaDeShow.Controllers.API
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class EventosAPIController : ControllerBase
@@ -25,9 +26,6 @@ namespace CasaDeShow.Controllers.API
             this.database = database;
         }
 
-        ///<summary> 
-        ///Lista todos os eventos.
-        ///</summary>
         [HttpGet]
         public IActionResult GET()
         {
@@ -36,7 +34,6 @@ namespace CasaDeShow.Controllers.API
         }
 
 
-        ///<summary> Cria evento. </summary>
         [HttpPost]
         public IActionResult Post([FromBody] eventoTemp etemp)
         {

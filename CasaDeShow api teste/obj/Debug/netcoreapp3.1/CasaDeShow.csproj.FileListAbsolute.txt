@@ -1220,3 +1220,5 @@ C:\Users\BSBO\Desktop\Projeto Casa API\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDe
 C:\Users\BSBO\Desktop\Projeto Casa API\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.csproj.CopyComplete
 C:\Users\BSBO\Desktop\Projeto Casa API\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.dll
 C:\Users\BSBO\Desktop\Projeto Casa API\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.pdb
+C:\Users\BSBO\Desktop\Projeto Casa API\CasaDeShow\bin\Debug\netcoreapp3.1\CasaDeShow.xml
+C:\Users\BSBO\Desktop\Projeto Casa API\CasaDeShow\obj\Debug\netcoreapp3.1\CasaDeShow.xml

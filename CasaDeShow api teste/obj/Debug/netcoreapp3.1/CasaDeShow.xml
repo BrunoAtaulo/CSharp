@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CasaDeShow</name>
+    </assembly>
+    <members>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.GET">
+            <summary>
+            teste
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.Delete(System.Int32)">
+            <summary>
+            Deletar uma casa de show específica.
+            </summary>
+        </member>
+    </members>
+</doc>

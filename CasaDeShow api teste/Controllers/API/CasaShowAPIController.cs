@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CasaDeShow.Controllers.API
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class CasaShowAPIController : ControllerBase
@@ -20,7 +21,9 @@ namespace CasaDeShow.Controllers.API
             this.database = database;
         }
 
-        // Lista todas as casas de show existentes
+        /// <summary>
+        /// teste
+        /// </summary>
         [HttpGet]
         public IActionResult GET()
         {
@@ -113,6 +116,10 @@ namespace CasaDeShow.Controllers.API
             }
         }
 
+        /// <summary>
+        /// Deletar uma casa de show específica.
+        /// </summary>
+        
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

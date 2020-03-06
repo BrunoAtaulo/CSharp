@@ -6,12 +6,12 @@ using System.Linq;
 
 namespace CasaDeShow.Controllers.API
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class CompraAPIController : ControllerBase
     {
         private readonly ApplicationDbContext database;
-        // private readonly UserManager<IdentityUser> _userManager;
 
         public CompraAPIController(ApplicationDbContext database)
         {

@@ -14,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
 using System.IO;
+using Microsoft.OpenApi.Models;
+
 
 namespace CasaDeShow
 {
@@ -33,7 +35,11 @@ namespace CasaDeShow
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
-                    // Configuration.GetConnectionString("teste")));
+                    // Adicionei para testar o summary
+                    services.AddControllers();
+
+                    
+            // Configuration.GetConnectionString("teste")));
 
 
             services.AddDefaultIdentity<IdentityUser>(config =>
@@ -45,7 +51,7 @@ namespace CasaDeShow
                    .AddEntityFrameworkStores<ApplicationDbContext>();
 
             // Criando politica
-            services.AddAuthorization(options => options.AddPolicy("Gerenciador", policy => policy.RequireClaim("Adm","True")));
+            services.AddAuthorization(options => options.AddPolicy("Gerenciador", policy => policy.RequireClaim("Adm", "True")));
 
 
             services.AddControllersWithViews();
@@ -55,7 +61,16 @@ namespace CasaDeShow
             //Swagger
             services.AddSwaggerGen(config =>
             {
-                config.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API Casa de Show", Version = "v1" });
+                // config.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API Casa de Show", Version = "v1" });
+                // config.SwaggerDoc("v1", new OpenApiInfo { Title = "API Casa de Show", Version = "v1" });
+                config.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "API Casa de Show",
+                    Description = "API rest utilizada no projeto Casa de Show",
+                });
+
+
             });
         }
 
@@ -89,7 +104,7 @@ namespace CasaDeShow
             }
             );
             // ***********************************
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
