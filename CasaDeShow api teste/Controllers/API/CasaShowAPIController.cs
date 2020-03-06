@@ -146,13 +146,19 @@ namespace CasaDeShow.Controllers.API
             return Ok(casa);
         }
 
-        [HttpGet("nome/" +"{nome}")]
-        public IActionResult Nome()
+        [HttpGet("nome/" + "{nome}")]
+        public IActionResult Nome(string nome)
         {
-            // var casa = database.Casadeshow.OrderByDescending(casa => casa.Nome).ToList();
-            return Ok("Teste");
-        }
+            var pesquisacasa = from c in database.Casadeshow
+                               select c;
 
+            if (!String.IsNullOrEmpty(nome))
+            {
+                pesquisacasa = pesquisacasa.Where(casa => casa.Nome.ToLower().Contains(nome.ToLower()));
+            }
+            return Ok(pesquisacasa.ToList());
+
+        }
 
         public class CasaDeShowTemp
         {
