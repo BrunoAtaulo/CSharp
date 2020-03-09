@@ -24,8 +24,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult GET()
         {
-            var compras = database.Compra.ToList();
-            return Ok(compras);
+            try
+            {
+                var compras = database.Compra.ToList();
+                return Ok(compras);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -37,17 +45,13 @@ namespace CasaDeShow.Controllers.API
             try
             {
                 var compra = database.Compra.First(c => c.Id == id);
-
                 return Ok(compra);
-
             }
             catch (Exception)
             {
-                Response.StatusCode = 404;
-                return new ObjectResult("");
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
             }
         }
-
-
     }
 }

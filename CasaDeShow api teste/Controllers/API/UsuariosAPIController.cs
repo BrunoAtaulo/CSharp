@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using CasaDeShow.Data;
 using Microsoft.AspNetCore.Identity;
@@ -10,7 +11,7 @@ namespace CasaDeShow.Controllers.API
     public class UsuariosAPIController : ControllerBase
     {
         private readonly ApplicationDbContext database;
-        private readonly UserManager<IdentityUser> _userManager;
+        // private readonly UserManager<IdentityUser> _userManager;
 
         public UsuariosAPIController(ApplicationDbContext database)
         {
@@ -23,9 +24,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult GET()
         {
-            var usuarios = database.Users.ToList().Select(u => u.Id + "   " + u.Email);
-
-            return Ok(usuarios);
+            try
+            {
+                var usuarios = database.Users.ToList().Select(u => u.Id + "   " + u.Email);
+                return Ok(usuarios);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult("Usuários não localizados.");
+            }
         }
 
         /// <summary>
@@ -34,8 +42,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet("E-mail")]
         public IActionResult GET(string email)
         {
-            var usuario = database.Users.ToList().First(u => u.Email == email);
-            return Ok("Id: " + usuario.Id + "\nE-mail: "+usuario.Email);
+            try
+            {
+                var usuario = database.Users.ToList().First(u => u.Email == email);
+                return Ok("Id: " + usuario.Id + "\nE-mail: " + usuario.Email);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult("Registro não localizado, favor verificar e tentar novamente.");
+            }
         }
     }
 }

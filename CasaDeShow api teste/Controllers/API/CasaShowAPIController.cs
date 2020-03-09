@@ -14,7 +14,7 @@ namespace CasaDeShow.Controllers.API
     public class CasaShowAPIController : ControllerBase
     {
         private readonly ApplicationDbContext database;
-        private readonly UserManager<IdentityUser> _userManager;
+        // private readonly UserManager<IdentityUser> _userManager;
 
         public CasaShowAPIController(ApplicationDbContext database)
         {
@@ -27,8 +27,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult GET()
         {
-            var casasdeshow = database.Casadeshow.ToList();
-            return Ok(casasdeshow);
+            try
+            {
+                var casasdeshow = database.Casadeshow.ToList();
+                return Ok(casasdeshow);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Não encontrado casas de show" });
+            }
         }
 
         /// <summary>
@@ -37,29 +45,38 @@ namespace CasaDeShow.Controllers.API
         [HttpPost]
         public IActionResult Post([FromBody] CasaDeShowTemp casaTemp)
         {
-            // Validação
-            if (casaTemp.Nome.Length <= 5)
+            try
+            {
+                // Validação
+                if (casaTemp.Nome.Length <= 5)
+                {
+                    Response.StatusCode = 400;
+                    return new ObjectResult(new { msg = "O casa de show precisa ter nome maior que 5 caracteres." });
+                }
+
+                if (casaTemp.Endereco.Length <= 5)
+                {
+                    Response.StatusCode = 400;
+                    return new ObjectResult(new { msg = "O endereço precisa ter mais que 5 caractere" });
+                }
+
+                Casadeshow c = new Casadeshow();
+                c.Nome = casaTemp.Nome;
+                c.Endereco = casaTemp.Endereco;
+                database.Casadeshow.Add(c);
+
+                // Salvando as alterações
+                database.SaveChanges();
+
+                Response.StatusCode = 201;
+                return new ObjectResult("Casa de show criada com sucesso");
+            }
+            catch (Exception)
             {
                 Response.StatusCode = 400;
-                return new ObjectResult(new { msg = "O casa de show precisa ter nome maior que 5 caracteres." });
+                return new ObjectResult(new { msg = "Casa de show não cadastrada, favor verificar as informações e tentar novamente." });
             }
 
-            if (casaTemp.Endereco.Length <= 5)
-            {
-                Response.StatusCode = 400;
-                return new ObjectResult(new { msg = "O endereço precisa ter mais que 5 caractere" });
-            }
-
-            Casadeshow c = new Casadeshow();
-            c.Nome = casaTemp.Nome;
-            c.Endereco = casaTemp.Endereco;
-            database.Casadeshow.Add(c);
-
-            // Salvando as alterações
-            database.SaveChanges();
-
-            Response.StatusCode = 201;
-            return new ObjectResult("");
         }
 
         /// <summary>
@@ -71,14 +88,12 @@ namespace CasaDeShow.Controllers.API
             try
             {
                 var casadeshow = database.Casadeshow.First(c => c.Id == id);
-
                 return Ok(casadeshow);
-
             }
             catch (Exception)
             {
                 Response.StatusCode = 404;
-                return new ObjectResult("");
+                return new ObjectResult(new { msg = "Não encontrado." });
             }
         }
 
@@ -101,7 +116,8 @@ namespace CasaDeShow.Controllers.API
 
                         // Salvando no banco de dados
                         database.SaveChanges();
-                        return Ok();
+                        // return Ok();
+                        return new ObjectResult(new { msg = "Registro editado com sucesso" });
                     }
                     else
                     {
@@ -134,12 +150,13 @@ namespace CasaDeShow.Controllers.API
                 var casa = database.Casadeshow.First(casatemp => casatemp.Id == id);
                 database.Casadeshow.Remove(casa);
                 database.SaveChanges();
-                return Ok();
+                // return Ok();
+                return new ObjectResult(new { msg = "Casa de show deletada com sucesso." });
             }
             catch (Exception)
             {
-                Response.StatusCode = 404;
-                return new ObjectResult("");
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
             }
         }
 
@@ -150,8 +167,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult ASC()
         {
-            var casa = database.Casadeshow.ToList();
-            return Ok(casa.OrderBy(casa => casa.Nome));
+            try
+            {
+                var casa = database.Casadeshow.ToList();
+                return Ok(casa.OrderBy(casa => casa.Nome));
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -161,8 +186,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult DESC()
         {
-            var casa = database.Casadeshow.OrderByDescending(casa => casa.Nome).ToList();
-            return Ok(casa);
+            try
+            {
+                var casa = database.Casadeshow.OrderByDescending(casa => casa.Nome).ToList();
+                return Ok(casa);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -171,15 +204,22 @@ namespace CasaDeShow.Controllers.API
         [HttpGet("nome/" + "{nome}")]
         public IActionResult Nome(string nome)
         {
-            var pesquisacasa = from c in database.Casadeshow
-                               select c;
-
-            if (!String.IsNullOrEmpty(nome))
+            try
             {
-                pesquisacasa = pesquisacasa.Where(casa => casa.Nome.ToLower().Contains(nome.ToLower()));
-            }
-            return Ok(pesquisacasa.ToList());
+                var pesquisacasa = from c in database.Casadeshow
+                                   select c;
 
+                if (!String.IsNullOrEmpty(nome))
+                {
+                    pesquisacasa = pesquisacasa.Where(casa => casa.Nome.ToLower().Contains(nome.ToLower()));
+                }
+                return Ok(pesquisacasa.ToList());
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         public class CasaDeShowTemp

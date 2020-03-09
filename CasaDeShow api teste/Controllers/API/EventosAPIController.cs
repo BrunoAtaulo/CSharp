@@ -19,7 +19,7 @@ namespace CasaDeShow.Controllers.API
     public class EventosAPIController : ControllerBase
     {
         private readonly ApplicationDbContext database;
-        private readonly UserManager<IdentityUser> _userManager;
+        // private readonly UserManager<IdentityUser> _userManager;
 
         public EventosAPIController(ApplicationDbContext database)
         {
@@ -32,56 +32,73 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult GET()
         {
-            var eventos = database.Evento.ToList();
-            return Ok(eventos);
+            try
+            {
+                var eventos = database.Evento.ToList();
+                return Ok(eventos);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Eventos não localizados." });
+            }
         }
-        
+
         /// <summary>
         /// Criar evento.
         /// </summary>
         [HttpPost]
         public IActionResult Post([FromBody] eventoTemp etemp)
         {
-            Evento e = new Evento();
-            e.NomeEvento = etemp.NomeEvento;
-            e.Capacidade = etemp.Capacidade;
-            e.Data = etemp.Data;
-            e.ValorIngresso = etemp.ValorIngresso;
-            e.Casadeshow = database.Casadeshow.First(p => p.Id == etemp.CasadeshowId);
-            e.IngressosRestantes = etemp.Capacidade;
-            switch (etemp.GeneroMusica)
+            try
             {
-                case 1:
-                    e.GeneroMusica = "Rock";
-                    break;
-                case 2:
-                    e.GeneroMusica = "Pop";
-                    break;
-                case 3:
-                    e.GeneroMusica = "Pagode";
-                    break;
-                case 4:
-                    e.GeneroMusica = "Samba";
-                    break;
-                case 5:
-                    e.GeneroMusica = "Axe";
-                    break;
-                case 6:
-                    e.GeneroMusica = "Gospel";
-                    break;
-                case 7:
-                    e.GeneroMusica = "Forro";
-                    break;
-                case 8:
-                    e.GeneroMusica = "Funk";
-                    break;
-                default:
-                    e.GeneroMusica = "Rock";
-                    break;
+                Evento e = new Evento();
+                e.NomeEvento = etemp.NomeEvento;
+                e.Capacidade = etemp.Capacidade;
+                e.Data = etemp.Data;
+                e.ValorIngresso = etemp.ValorIngresso;
+                e.Casadeshow = database.Casadeshow.First(p => p.Id == etemp.CasadeshowId);
+                e.IngressosRestantes = etemp.Capacidade;
+                switch (etemp.GeneroMusica)
+                {
+                    case 1:
+                        e.GeneroMusica = "Rock";
+                        break;
+                    case 2:
+                        e.GeneroMusica = "Pop";
+                        break;
+                    case 3:
+                        e.GeneroMusica = "Pagode";
+                        break;
+                    case 4:
+                        e.GeneroMusica = "Samba";
+                        break;
+                    case 5:
+                        e.GeneroMusica = "Axe";
+                        break;
+                    case 6:
+                        e.GeneroMusica = "Gospel";
+                        break;
+                    case 7:
+                        e.GeneroMusica = "Forro";
+                        break;
+                    case 8:
+                        e.GeneroMusica = "Funk";
+                        break;
+                    default:
+                        e.GeneroMusica = "Rock";
+                        break;
+                }
+                database.Evento.Add(e);
+                database.SaveChanges();
+                return Ok("Evento incluído com sucesso");
             }
-            database.Evento.Add(e);
-            database.SaveChanges();
-            return Ok("Evento incluído com sucesso");
+            catch (Exception)
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Evento não cadastrado, favor verificar as informações e tentar novamente." });
+            }
+
         }
 
         /// <summary>
@@ -90,8 +107,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet("{id}")]
         public IActionResult GET(int id)
         {
-            var eventos = database.Evento.First(p => p.Id == id);
-            return Ok(eventos);
+            try
+            {
+                var eventos = database.Evento.First(p => p.Id == id);
+                return Ok(eventos);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Evento não encontrado." });
+            }
         }
 
         /// <summary>
@@ -100,53 +125,61 @@ namespace CasaDeShow.Controllers.API
         [HttpPut]
         public IActionResult Put([FromBody] eventoTemp etemp, int id)
         {
-            var ev = database.Evento.First(evtemp => evtemp.Id == etemp.Id);
-            ev.NomeEvento = etemp.NomeEvento != null ? etemp.NomeEvento : ev.NomeEvento;
-            ev.Capacidade = etemp.Capacidade != 0 ? etemp.Capacidade : ev.Capacidade;
-            ev.Data = etemp.Data != null ? etemp.Data : ev.Data;
-            ev.ValorIngresso = etemp.ValorIngresso != 0 ? etemp.ValorIngresso : ev.ValorIngresso;
-
-            if (etemp.GeneroMusica != 0)
+            try
             {
-                switch (etemp.GeneroMusica)
+                var ev = database.Evento.First(evtemp => evtemp.Id == etemp.Id);
+                ev.NomeEvento = etemp.NomeEvento != null ? etemp.NomeEvento : ev.NomeEvento;
+                ev.Capacidade = etemp.Capacidade != 0 ? etemp.Capacidade : ev.Capacidade;
+                ev.Data = etemp.Data != null ? etemp.Data : ev.Data;
+                ev.ValorIngresso = etemp.ValorIngresso != 0 ? etemp.ValorIngresso : ev.ValorIngresso;
+
+                if (etemp.GeneroMusica != 0)
                 {
-                    case 1:
-                        ev.GeneroMusica = "Rock";
-                        break;
-                    case 2:
-                        ev.GeneroMusica = "Pop";
-                        break;
-                    case 3:
-                        ev.GeneroMusica = "Pagode";
-                        break;
-                    case 4:
-                        ev.GeneroMusica = "Samba";
-                        break;
-                    case 5:
-                        ev.GeneroMusica = "Axe";
-                        break;
-                    case 6:
-                        ev.GeneroMusica = "Gospel";
-                        break;
-                    case 7:
-                        ev.GeneroMusica = "Forro";
-                        break;
-                    case 8:
-                        ev.GeneroMusica = "Funk";
-                        break;
-                    default:
-                        ev.GeneroMusica = "Rock";
-                        break;
+                    switch (etemp.GeneroMusica)
+                    {
+                        case 1:
+                            ev.GeneroMusica = "Rock";
+                            break;
+                        case 2:
+                            ev.GeneroMusica = "Pop";
+                            break;
+                        case 3:
+                            ev.GeneroMusica = "Pagode";
+                            break;
+                        case 4:
+                            ev.GeneroMusica = "Samba";
+                            break;
+                        case 5:
+                            ev.GeneroMusica = "Axe";
+                            break;
+                        case 6:
+                            ev.GeneroMusica = "Gospel";
+                            break;
+                        case 7:
+                            ev.GeneroMusica = "Forro";
+                            break;
+                        case 8:
+                            ev.GeneroMusica = "Funk";
+                            break;
+                        default:
+                            ev.GeneroMusica = "Rock";
+                            break;
+                    }
                 }
+
+                database.SaveChanges();
+                // return Ok();
+                return new ObjectResult(new { msg = "Evento editado com sucesso." });
             }
-
-
-            database.SaveChanges();
-            return Ok();
+            catch (System.Exception)
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
-        /// Deletar casa de show especifica.
+        /// Deletar evento especifico.
         /// </summary>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
@@ -156,13 +189,14 @@ namespace CasaDeShow.Controllers.API
                 var ev = database.Evento.First(evtemp => evtemp.Id == id);
                 database.Evento.Remove(ev);
                 database.SaveChanges();
-                return Ok();
+                // return Ok();
+                return new ObjectResult(new { msg = "Evento deletado com sucesso." });
 
             }
             catch (Exception)
             {
                 Response.StatusCode = 404;
-                return new ObjectResult("");
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
             }
         }
 
@@ -173,8 +207,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult CapacidadeASC()
         {
-            var evento = database.Evento.OrderBy(evento => evento.Capacidade).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderBy(evento => evento.Capacidade).ToList();
+                return Ok(evento);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -184,8 +226,17 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult CapacidadeDESC()
         {
-            var evento = database.Evento.OrderByDescending(evento => evento.Capacidade).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderByDescending(evento => evento.Capacidade).ToList();
+                return Ok(evento);
+
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -195,8 +246,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult DataASC()
         {
-            var evento = database.Evento.OrderBy(evento => evento.Data).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderBy(evento => evento.Data).ToList();
+                return Ok(evento);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -206,8 +265,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult DataDESC()
         {
-            var evento = database.Evento.OrderByDescending(evento => evento.Data).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderByDescending(evento => evento.Data).ToList();
+                return Ok(evento);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -217,8 +284,17 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult NomeASC()
         {
-            var evento = database.Evento.OrderBy(evento => evento.NomeEvento).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderBy(evento => evento.NomeEvento).ToList();
+                return Ok(evento);
+
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -228,8 +304,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult NomeDESC()
         {
-            var evento = database.Evento.OrderByDescending(evento => evento.NomeEvento).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderByDescending(evento => evento.NomeEvento).ToList();
+                return Ok(evento);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -239,8 +323,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult PrecoASC()
         {
-            var evento = database.Evento.OrderBy(evento => evento.ValorIngresso).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderBy(evento => evento.ValorIngresso).ToList();
+                return Ok(evento);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         /// <summary>
@@ -250,8 +342,16 @@ namespace CasaDeShow.Controllers.API
         [HttpGet]
         public IActionResult PrecoDESC()
         {
-            var evento = database.Evento.OrderByDescending(evento => evento.ValorIngresso).ToList();
-            return Ok(evento);
+            try
+            {
+                var evento = database.Evento.OrderByDescending(evento => evento.ValorIngresso).ToList();
+                return Ok(evento);
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult(new { msg = "Registro não localizado, favor verificar e tentar novamente." });
+            }
         }
 
         public class eventoTemp
