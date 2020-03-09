@@ -17,7 +17,9 @@ namespace CasaDeShow.Controllers.API
             this.database = database;
         }
 
-        //Lista todos os usuários
+        /// <summary>
+        /// Listar todos os usuario.
+        /// </summary>
         [HttpGet]
         public IActionResult GET()
         {
@@ -26,7 +28,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(usuarios);
         }
 
-
+        /// <summary>
+        /// Buscar pelo e-mail.
+        /// </summary>
         [HttpGet("E-mail")]
         public IActionResult GET(string email)
         {

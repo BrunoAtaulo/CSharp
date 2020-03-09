@@ -35,10 +35,10 @@ namespace CasaDeShow
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
-                    // Adicionei para testar o summary
-                    services.AddControllers();
+            // Adicionei para testar o summary
+            services.AddControllers();
 
-                    
+
             // Configuration.GetConnectionString("teste")));
 
 
@@ -70,8 +70,12 @@ namespace CasaDeShow
                     Description = "API rest utilizada no projeto Casa de Show",
                 });
 
-
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                config.IncludeXmlComments(xmlPath);
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

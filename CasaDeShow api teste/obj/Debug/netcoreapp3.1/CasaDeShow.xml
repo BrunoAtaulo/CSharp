@@ -6,12 +6,127 @@
     <members>
         <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.GET">
             <summary>
-            teste
+            Listar todas as casas de show.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.Post(CasaDeShow.Controllers.API.CasaShowAPIController.CasaDeShowTemp)">
+            <summary>
+            Criar casa de show.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.Get(System.Int32)">
+            <summary>
+            Buscar casa de show pelo ID.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.Put(CasaDeShow.Models.Casadeshow)">
+            <summary>
+            Editar casa de show.
             </summary>
         </member>
         <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.Delete(System.Int32)">
             <summary>
-            Deletar uma casa de show específica.
+            Deletar uma casa de show especifica.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.ASC">
+            <summary>
+            Listar casa de show em ordem crescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.DESC">
+            <summary>
+            Listar casa de show em ordem decrescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CasaShowAPIController.Nome(System.String)">
+            <summary>
+            Buscar casa de show pelo nome.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CompraAPIController.GET">
+            <summary>
+            Listar todas as compras.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.CompraAPIController.Get(System.Int32)">
+            <summary>
+            Buscar compra pelo ID.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.GET">
+            <summary>
+            Listar todos os eventos.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.Post(CasaDeShow.Controllers.API.EventosAPIController.eventoTemp)">
+            <summary>
+            Criar evento.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.GET(System.Int32)">
+            <summary>
+            Buscar evento pelo ID.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.Put(CasaDeShow.Controllers.API.EventosAPIController.eventoTemp,System.Int32)">
+            <summary>
+            Editar evento pelo ID.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.Delete(System.Int32)">
+            <summary>
+            Deletar casa de show especifica.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.CapacidadeASC">
+            <summary>
+            Listar capacidade em ordem crescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.CapacidadeDESC">
+            <summary>
+            Listar capacidade em ordem decrescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.DataASC">
+            <summary>
+            Listar data em ordem crescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.DataDESC">
+            <summary>
+            Listar data em ordem decrescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.NomeASC">
+            <summary>
+            Listar evento em ordem crescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.NomeDESC">
+            <summary>
+            Listar evento em ordem decrescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.PrecoASC">
+            <summary>
+            Listar preco em ordem crescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.EventosAPIController.PrecoDESC">
+            <summary>
+            Listar preco em ordem decrescente.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.UsuariosAPIController.GET">
+            <summary>
+            Listar todos os usuario.
+            </summary>
+        </member>
+        <member name="M:CasaDeShow.Controllers.API.UsuariosAPIController.GET(System.String)">
+            <summary>
+            Buscar pelo e-mail.
             </summary>
         </member>
     </members>

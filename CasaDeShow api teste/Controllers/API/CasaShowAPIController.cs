@@ -22,7 +22,7 @@ namespace CasaDeShow.Controllers.API
         }
 
         /// <summary>
-        /// teste
+        /// Listar todas as casas de show.
         /// </summary>
         [HttpGet]
         public IActionResult GET()
@@ -31,7 +31,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(casasdeshow);
         }
 
-        // Criar casa de show
+        /// <summary>
+        /// Criar casa de show.
+        /// </summary>
         [HttpPost]
         public IActionResult Post([FromBody] CasaDeShowTemp casaTemp)
         {
@@ -60,7 +62,9 @@ namespace CasaDeShow.Controllers.API
             return new ObjectResult("");
         }
 
-        // Busca casa de show pelo ID
+        /// <summary>
+        /// Buscar casa de show pelo ID.
+        /// </summary>
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -78,6 +82,9 @@ namespace CasaDeShow.Controllers.API
             }
         }
 
+        /// <summary>
+        /// Editar casa de show.
+        /// </summary>
         [HttpPut]
         public IActionResult Put([FromBody] Casadeshow casadeshow)
         {
@@ -117,9 +124,8 @@ namespace CasaDeShow.Controllers.API
         }
 
         /// <summary>
-        /// Deletar uma casa de show específica.
+        /// Deletar uma casa de show especifica.
         /// </summary>
-        
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -137,6 +143,9 @@ namespace CasaDeShow.Controllers.API
             }
         }
 
+        /// <summary>
+        /// Listar casa de show em ordem crescente.
+        /// </summary>
         [Route("ASC")]
         [HttpGet]
         public IActionResult ASC()
@@ -145,6 +154,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(casa.OrderBy(casa => casa.Nome));
         }
 
+        /// <summary>
+        /// Listar casa de show em ordem decrescente.
+        /// </summary>
         [Route("DESC")]
         [HttpGet]
         public IActionResult DESC()
@@ -153,6 +165,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(casa);
         }
 
+        /// <summary>
+        /// Buscar casa de show pelo nome.
+        /// </summary>
         [HttpGet("nome/" + "{nome}")]
         public IActionResult Nome(string nome)
         {

@@ -18,6 +18,9 @@ namespace CasaDeShow.Controllers.API
             this.database = database;
         }
 
+        /// <summary>
+        /// Listar todas as compras.
+        /// </summary>
         [HttpGet]
         public IActionResult GET()
         {
@@ -25,7 +28,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(compras);
         }
 
-          // Busca Comprapelo ID
+        /// <summary>
+        /// Buscar compra pelo ID.
+        /// </summary>
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {

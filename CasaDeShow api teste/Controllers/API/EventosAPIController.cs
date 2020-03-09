@@ -26,14 +26,19 @@ namespace CasaDeShow.Controllers.API
             this.database = database;
         }
 
+        /// <summary>
+        /// Listar todos os eventos.
+        /// </summary>
         [HttpGet]
         public IActionResult GET()
         {
             var eventos = database.Evento.ToList();
             return Ok(eventos);
         }
-
-
+        
+        /// <summary>
+        /// Criar evento.
+        /// </summary>
         [HttpPost]
         public IActionResult Post([FromBody] eventoTemp etemp)
         {
@@ -79,6 +84,9 @@ namespace CasaDeShow.Controllers.API
             return Ok("Evento incluído com sucesso");
         }
 
+        /// <summary>
+        /// Buscar evento pelo ID.
+        /// </summary>
         [HttpGet("{id}")]
         public IActionResult GET(int id)
         {
@@ -86,6 +94,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(eventos);
         }
 
+        /// <summary>
+        /// Editar evento pelo ID.
+        /// </summary>
         [HttpPut]
         public IActionResult Put([FromBody] eventoTemp etemp, int id)
         {
@@ -134,6 +145,9 @@ namespace CasaDeShow.Controllers.API
             return Ok();
         }
 
+        /// <summary>
+        /// Deletar casa de show especifica.
+        /// </summary>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -152,6 +166,9 @@ namespace CasaDeShow.Controllers.API
             }
         }
 
+        /// <summary>
+        /// Listar capacidade em ordem crescente.
+        /// </summary>
         [Route("Capacidade/ASC")]
         [HttpGet]
         public IActionResult CapacidadeASC()
@@ -160,6 +177,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(evento);
         }
 
+        /// <summary>
+        /// Listar capacidade em ordem decrescente.
+        /// </summary>
         [Route("Capacidade/DESC")]
         [HttpGet]
         public IActionResult CapacidadeDESC()
@@ -168,6 +188,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(evento);
         }
 
+        /// <summary>
+        /// Listar data em ordem crescente.
+        /// </summary>
         [Route("Data/ASC")]
         [HttpGet]
         public IActionResult DataASC()
@@ -176,6 +199,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(evento);
         }
 
+        /// <summary>
+        /// Listar data em ordem decrescente.
+        /// </summary>
         [Route("Data/DESC")]
         [HttpGet]
         public IActionResult DataDESC()
@@ -184,6 +210,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(evento);
         }
 
+        /// <summary>
+        /// Listar evento em ordem crescente.
+        /// </summary>
         [Route("Nome/ASC")]
         [HttpGet]
         public IActionResult NomeASC()
@@ -192,6 +221,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(evento);
         }
 
+        /// <summary>
+        /// Listar evento em ordem decrescente.
+        /// </summary>
         [Route("Nome/DESC")]
         [HttpGet]
         public IActionResult NomeDESC()
@@ -200,6 +232,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(evento);
         }
 
+        /// <summary>
+        /// Listar preco em ordem crescente.
+        /// </summary>
         [Route("Preco/ASC")]
         [HttpGet]
         public IActionResult PrecoASC()
@@ -208,6 +243,9 @@ namespace CasaDeShow.Controllers.API
             return Ok(evento);
         }
 
+        /// <summary>
+        /// Listar preco em ordem decrescente.
+        /// </summary>
         [Route("Preco/DESC")]
         [HttpGet]
         public IActionResult PrecoDESC()
